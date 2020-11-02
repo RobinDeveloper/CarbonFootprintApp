@@ -1,0 +1,15 @@
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\bin\Debug\CarbonFootprint.exe.config
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\bin\Debug\CarbonFootprint.exe
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\bin\Debug\CarbonFootprint.pdb
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.csprojAssemblyReference.cache
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\MainWindow.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\App.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint_MarkupCompile.cache
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint_MarkupCompile.lref
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\MainWindow.baml
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.g.resources
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.Properties.Resources.resources
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.csproj.GenerateResource.cache
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.csproj.CoreCompileInputs.cache
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.exe
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\obj\Debug\CarbonFootprint.pdb
