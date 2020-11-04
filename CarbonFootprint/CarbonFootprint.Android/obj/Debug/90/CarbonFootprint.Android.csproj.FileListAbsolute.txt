@@ -8,6 +8,7 @@ D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\bin\Debug
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\bin\Debug\mscorlib.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.pdb
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.dll.mdb
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\bin\Debug\mscorlib.pdb
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\build.props
@@ -47,6 +48,7 @@ D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\mscorlib.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\mscorlib.pdb
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\netstandard.dll
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\System.Core.dll

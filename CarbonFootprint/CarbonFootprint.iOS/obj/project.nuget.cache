@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TpMNDlJ4MGSSFwLiCyGaPt8CfIWivTIjkDlH1nvqVIt0PRKfqeyMjNTpQASLT2FUUZsDbKtcJJ+PWZaaqVkLbg==",
+  "dgSpecHash": "6xtobaiYbMt3E2eo154qMneTdC9VX3a3fbPsoRtbZ4ls7WmF/98og0vb1vWzPmttqL1X9oscN4WXViPBWMBuRw==",
   "success": true,
   "projectFilePath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Robin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\xamarin.forms\\4.4.0.991640\\xamarin.forms.4.4.0.991640.nupkg.sha512"
   ],
   "logs": []

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace CarbonFootprint
@@ -12,6 +8,11 @@ namespace CarbonFootprint
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void SettingsButton(object _sender, EventArgs _e)
+        {
+            await Navigation.PushAsync(new SettingScreen());
         }
     }
 }

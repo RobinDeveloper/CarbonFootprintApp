@@ -12,7 +12,7 @@ namespace CarbonFootprint
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SettingScreen();
         }
 
         protected override void OnStart()
