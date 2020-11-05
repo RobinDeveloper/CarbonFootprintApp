@@ -10,3 +10,5 @@ D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstan
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.pdb
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\SettingScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\DebugValues.xaml.g.cs
