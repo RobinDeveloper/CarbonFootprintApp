@@ -1891,32 +1891,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Robin\\.nuget\\packages\\": {}
+    "C:\\Users\\teunv\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.Android\\CarbonFootprint.Android.csproj",
+      "projectUniqueName": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint.Android\\CarbonFootprint.Android.csproj",
       "projectName": "CarbonFootprint.Android",
-      "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.Android\\CarbonFootprint.Android.csproj",
-      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-      "outputPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.Android\\obj\\",
+      "projectPath": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint.Android\\CarbonFootprint.Android.csproj",
+      "packagesPath": "C:\\Users\\teunv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\teunv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
-              "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj"
+            "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
+              "projectPath": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj"
             }
           }
         }
