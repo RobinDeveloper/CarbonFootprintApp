@@ -42,6 +42,10 @@
       "frameworks": {
         "xamarinios10": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.4.0.991640, )"

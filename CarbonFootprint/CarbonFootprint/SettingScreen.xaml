@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarbonFootprint.SettingScreen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="SettingScreenText" Text="Setting Screen" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Label x:Name="PersonalInfortmation" Text="Personal information" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="NameField" Placeholder="Input name" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Label x:Name="CarInformation" Text="Car information" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="CarName" Placeholder="Input car name" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="CarAge" Placeholder="Input car age" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="Carbuild" Placeholder="Input car build year" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="GasMilage" Placeholder="Input gas milage 1:" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Picker x:Name="TypePicker" Title="Pick car type" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Label x:Name="HouseInformation" Text="House information" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="EnergyEfficiency" Placeholder="Energy efficiancy rating" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Entry x:Name="CubicVolume" Placeholder="Input cubic volume x:x:x" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Button x:Name="SubmitButton" Text="Submit" Clicked="OnSubmit"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
