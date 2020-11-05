@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using CarbonFootprint.DataCollection;
 using CarbonFootprint.utilities;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+// ReSharper disable HeapView.BoxingAllocation
 
 namespace CarbonFootprint
 {
@@ -16,18 +18,16 @@ namespace CarbonFootprint
         private Car m_CarData = new Car();
         private House m_HouseData = new House();
 
-        private string m_FileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "userdata.json");
-
         private Dictionary<string, Car.CarType> m_NameToCarType = new Dictionary<string, Car.CarType>
         {
             {"Hybrid", Car.CarType.Hybrid},
             {"Gas", Car.CarType.Gas},
+            {"Diesel", Car.CarType.Diesel},
             {"Electric", Car.CarType.Electric}
         };
 
         public SettingScreen()
         {
-            File.Create(m_FileName).Close();
             InitializeComponent();
 
             foreach (string typeName in m_NameToCarType.Keys)
@@ -35,20 +35,40 @@ namespace CarbonFootprint
                 TypePicker.Items.Add(typeName);
             }
         }
-
-        //TODO: add check when field is empty to keep default
+        
         private void OnSubmit(object _sender, EventArgs _e)
         {
-            m_UserData.Name = NameField.Text;
+            CreateUserData();
+            Jsonhandler.Instance.UploadJson("userdata.json", _toSerialize: m_UserData);
+        }
 
+        private void CreateUserData()
+        {
+            GetPersonalInformation();
+            GetCarInformation();
+            GetHouseInformation();
+            m_UserData.Car = m_CarData;
+            m_UserData.House = m_HouseData;
+        }
+
+        private void GetPersonalInformation()
+        {
+            if(NameField.Text != String.Empty)
+                m_UserData.Name = NameField.Text;
+        }
+
+        private void GetCarInformation()
+        {
             m_CarData.Name = CarName.Text;
             m_CarData.Age = ParseIntValue(CarAge.Text, "Invalid car age");
             m_CarData.BuildYear = ParseIntValue(Carbuild.Text, "Invalid build year");
             m_CarData.GasMilage = ParseIntValue(Carbuild.Text, "Invalid milage input");
             Enum.TryParse(TypePicker.SelectedItem.ToString(), out m_CarData.CarEnergyType);
+        }
 
-            
-             char e = EnergyEfficiency.Text.ToLower()[0];
+        private void GetHouseInformation()
+        {
+            char e = EnergyEfficiency.Text.ToLower()[0];
             if (e == 'a' || e == 'b' || e == 'c' || e == 'd' || e == 'e' || e == 'f')
                 m_HouseData.EneryEfficiancy = e.ToString().ToUpper()[0];
             else
@@ -62,20 +82,9 @@ namespace CarbonFootprint
                 m_HouseData.CubicMeters = GetCubicMeters(CubicVolume.Text);
             else
                 Device.BeginInvokeOnMainThread(() => { DisplayAlert("ReturnInvalid", "GetCubicMeters = null", "ok"); });
-            
-            m_UserData.Car = m_CarData;
-            m_UserData.House = m_HouseData;
-            UploadToJson();
-        }
 
-        private void UploadToJson()
-        {
-            string output = JsonConvert.SerializeObject(m_UserData);
-            File.WriteAllText(m_FileName, String.Empty);
-            File.WriteAllText(m_FileName, output);
-            SettingScreenText.Text = "Uploaded to json \n" + m_FileName;
         }
-
+        
         private Tuple<int, int, int> GetCubicMeters(string _inputString)
         {
             List<string> splitString = _inputString.Split(':').ToList();
