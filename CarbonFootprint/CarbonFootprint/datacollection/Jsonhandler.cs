@@ -18,6 +18,11 @@ namespace CarbonFootprint.DataCollection
             m_Path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
         }
 
+        public bool CheckIfFileExists(string _fileName)
+        {
+            return File.Exists(Path.Combine(m_Path, _fileName));
+        }
+
         public void UploadJson(string _fileName, object _toSerialize)
         {
             string filePath = Path.Combine(m_Path, _fileName);

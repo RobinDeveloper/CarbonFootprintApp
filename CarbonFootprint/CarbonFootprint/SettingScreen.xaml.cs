@@ -18,6 +18,9 @@ namespace CarbonFootprint
         private Car m_CarData = new Car();
         private House m_HouseData = new House();
 
+        private bool m_FileExist;
+        private UserData m_PremadeUserData;
+        
         private Dictionary<string, Car.CarType> m_NameToCarType = new Dictionary<string, Car.CarType>
         {
             {"Hybrid", Car.CarType.Hybrid},
@@ -30,6 +33,11 @@ namespace CarbonFootprint
         {
             InitializeComponent();
 
+            m_FileExist = Jsonhandler.Instance.CheckIfFileExists("userdata.json");
+            
+            if (m_FileExist)
+                m_PremadeUserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            
             foreach (string typeName in m_NameToCarType.Keys)
             {
                 TypePicker.Items.Add(typeName);
@@ -51,18 +59,29 @@ namespace CarbonFootprint
             m_UserData.House = m_HouseData;
         }
 
+        private string EmptyCheck(string _field, string _premadeText, string _errorTitle)
+        {
+            if (_field == String.Empty && !m_FileExist)
+                DisplayAlert(_errorTitle, "Enter in text/value", "ok");
+            else if (_field != String.Empty)
+                return _field;
+            else
+                return _premadeText;
+
+            return "Null";
+        }
+
         private void GetPersonalInformation()
         {
-            if(NameField.Text != String.Empty)
-                m_UserData.Name = NameField.Text;
+            m_UserData.Name = EmptyCheck(NameField.Text, m_PremadeUserData.Name, "Name can't be empty");
         }
 
         private void GetCarInformation()
         {
-            m_CarData.Name = CarName.Text;
-            m_CarData.Age = ParseIntValue(CarAge.Text, "Invalid car age");
-            m_CarData.BuildYear = ParseIntValue(Carbuild.Text, "Invalid build year");
-            m_CarData.GasMilage = ParseIntValue(Carbuild.Text, "Invalid milage input");
+            m_CarData.Name = EmptyCheck(CarName.Text, m_PremadeUserData.Car.Name, "Car name can't be empty");
+            m_CarData.Age = ParseIntValue(EmptyCheck(CarAge.Text, m_PremadeUserData.Car.Age.ToString(), "Car age cant be empty"), "Invalid car age");
+            m_CarData.BuildYear = ParseIntValue(EmptyCheck(Carbuild.Text, m_PremadeUserData.Car.BuildYear.ToString(), "Car build year can't be empty"), "Invalid build year");
+            m_CarData.GasMilage = ParseIntValue(EmptyCheck(GasMilage.Text, m_PremadeUserData.Car.GasMilage.ToString(), "Car gas milage can't be empty"), "Invalid milage input");
             Enum.TryParse(TypePicker.SelectedItem.ToString(), out m_CarData.CarEnergyType);
         }
 
@@ -76,10 +95,12 @@ namespace CarbonFootprint
                 {
                     DisplayAlert("Invalid energy rating", "please insert character from a-f", "ok");
                 });
-            m_HouseData.CubicMeters = GetCubicMeters(CubicVolume.Text);
 
-            if (GetCubicMeters(CubicVolume.Text) != null)
-                m_HouseData.CubicMeters = GetCubicMeters(CubicVolume.Text);
+            string premadeInput = $"{m_PremadeUserData.House.CubicMeters.Item1.ToString()}:{m_PremadeUserData.House.CubicMeters.Item2.ToString()}:{m_PremadeUserData.House.CubicMeters.Item3.ToString()}";
+            m_HouseData.CubicMeters = GetCubicMeters(EmptyCheck(CubicVolume.Text, premadeInput, "cubic input can't be empty"));
+
+            if (GetCubicMeters(EmptyCheck(CubicVolume.Text, premadeInput, "cubic input can't be empty")) != null)
+                m_HouseData.CubicMeters = GetCubicMeters(EmptyCheck(CubicVolume.Text, premadeInput, "cubic input can't be empty"));
             else
                 Device.BeginInvokeOnMainThread(() => { DisplayAlert("ReturnInvalid", "GetCubicMeters = null", "ok"); });
 

@@ -9,10 +9,5 @@ namespace CarbonFootprint
         {
             InitializeComponent();
         }
-
-        private async void SettingsButton(object _sender, EventArgs _e)
-        {
-            await Navigation.PushAsync(new SettingScreen());
-        }
     }
 }
