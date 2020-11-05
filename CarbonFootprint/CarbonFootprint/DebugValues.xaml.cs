@@ -26,7 +26,7 @@ namespace CarbonFootprint
 
         private void DeserializeJson()
         {
-            m_UserData = Jsonhandler.Instance.RequestUserData<UserData>("userdata.json");
+            m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
         }
 
         private void UpdateLabels()
