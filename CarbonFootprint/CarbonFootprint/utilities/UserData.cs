@@ -2,7 +2,6 @@
 
 namespace CarbonFootprint.utilities
 {
-
     public enum PositivityRating
     {
         Positive,

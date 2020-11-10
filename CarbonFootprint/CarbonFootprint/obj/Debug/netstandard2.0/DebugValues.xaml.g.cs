@@ -41,8 +41,6 @@ namespace CarbonFootprint {
         private global::Xamarin.Forms.Label CubicVolume;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-<<<<<<< HEAD
-=======
         private global::Xamarin.Forms.Label Train;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -55,7 +53,6 @@ namespace CarbonFootprint {
         private global::Xamarin.Forms.Label Car;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
->>>>>>> UpdatedTransportScreen
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(DebugValues));
             NameField = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "NameField");
@@ -66,13 +63,10 @@ namespace CarbonFootprint {
             CarType = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CarType");
             HouseEnergy = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "HouseEnergy");
             CubicVolume = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "CubicVolume");
-<<<<<<< HEAD
-=======
             Train = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Train");
             Bicycle = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Bicycle");
             Bus = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Bus");
             Car = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Car");
->>>>>>> UpdatedTransportScreen
         }
     }
 }

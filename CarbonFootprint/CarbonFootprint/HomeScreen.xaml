@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:carbonFootprint="clr-namespace:CarbonFootprint;assembly=CarbonFootprint"
+             x:Class="CarbonFootprint.HomeScreen">
+   <ContentPage.Content>
+       <StackLayout>
+           <Label Text="Hi Robin, \n Weclome to your carbon footprint homepage"/>
+           <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <chart:SfChart.BindingContext>
+                <carbonFootprint:ViewModel/>
+            </chart:SfChart.BindingContext>
+
+            <chart:SfChart.Legend>
+                <chart:ChartLegend />
+            </chart:SfChart.Legend>
+
+            <chart:SfChart.Title> 
+                <chart:ChartTitle Text="Chart"/>
+            </chart:SfChart.Title>
+
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis>
+                    <chart:CategoryAxis.Title>
+                        <chart:ChartAxisTitle Text="Rating"/>
+                    </chart:CategoryAxis.Title>
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis>
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Amount of KW"/>
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+                <chart:PieSeries ItemsSource="{Binding Data}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                    <chart:PieSeries.DataMarker>
+                        <chart:ChartDataMarker/>
+                    </chart:PieSeries.DataMarker>
+                </chart:PieSeries>
+            </chart:SfChart.Series>
+        </chart:SfChart>
+           <chart:SfChart x:Name="Chart2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.BindingContext>
+                    <carbonFootprint:ViewModel/>
+                </chart:SfChart.BindingContext>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title> 
+                    <chart:ChartTitle Text="Chart"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Rating"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Amount of KW"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:PieSeries ItemsSource="{Binding Data2}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                        <chart:PieSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:PieSeries.DataMarker>
+                    </chart:PieSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+           <chart:SfChart x:Name="Chart3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.BindingContext>
+                    <carbonFootprint:ViewModel/>
+                </chart:SfChart.BindingContext>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title> 
+                    <chart:ChartTitle Text="Chart"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Rating"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Amount of KW"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:PieSeries ItemsSource="{Binding Data3}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                        <chart:PieSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:PieSeries.DataMarker>
+                    </chart:PieSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+           <chart:SfChart x:Name="Chart4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.BindingContext>
+                    <carbonFootprint:ViewModel/>
+                </chart:SfChart.BindingContext>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title> 
+                    <chart:ChartTitle Text="Chart"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Rating"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Amount of KW"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:PieSeries ItemsSource="{Binding Data4}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                        <chart:PieSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:PieSeries.DataMarker>
+                    </chart:PieSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+       </StackLayout>
+   </ContentPage.Content>
+</ContentPage>

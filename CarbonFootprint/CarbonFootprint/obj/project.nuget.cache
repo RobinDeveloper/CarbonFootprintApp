@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "BFd6mAid47CC/AoRt+94uN4NMV/ePedWjMeHJTMBzPhyA6RO6RhtTG3pHsvWTUjtyGQg0FGn+giwUoloPSLh5g==",
+  "dgSpecHash": "upEyBg8Q+YRUdCCmBqH9EZAZ0UYx07h0wBVHjuTIBgS2CsSBdzUVDVDCQc1QWWSKuU3Gb+arZmx6xAG36PYiLA==",
   "success": true,
   "projectFilePath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\syncfusion.licensing\\18.2.0.59\\syncfusion.licensing.18.2.0.59.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.59\\syncfusion.xamarin.core.18.2.0.59.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.2.0.59\\syncfusion.xamarin.sfchart.18.2.0.59.nupkg.sha512",
     "C:\\Users\\Robin\\.nuget\\packages\\xamarin.forms\\4.4.0.991640\\xamarin.forms.4.4.0.991640.nupkg.sha512"
   ],
   "logs": []
