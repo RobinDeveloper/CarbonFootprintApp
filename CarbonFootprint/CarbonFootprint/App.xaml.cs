@@ -2,7 +2,6 @@
 using CarbonFootprint.DataCollection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using CarbonFootprint.DataCollection;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -13,12 +12,10 @@ namespace CarbonFootprint
         private Jsonhandler m_Jsonhandler;
         public App()
         {
-            Jsonhandler handlr = new Jsonhandler();
+            m_Jsonhandler = new Jsonhandler();
             InitializeComponent();
-            if (Jsonhandler.Instance.CheckIfFileExists("userdata.json"))
-                MainPage = new NavigationPage(new TransportScreen());
-            else
-                MainPage = new NavigationPage(new SettingScreen());
+
+            MainPage = new SettingScreen();
         }
 
         protected override void OnStart()

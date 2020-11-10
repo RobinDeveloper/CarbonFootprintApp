@@ -40,10 +40,6 @@ namespace CarbonFootprint
             HouseEnergy.Text = m_UserData.House.EneryEfficiancy.ToString();
             CubicVolume.Text =
                 $"{m_UserData.House.CubicMeters.Item1.ToString()} : {m_UserData.House.CubicMeters.Item2.ToString()} : {m_UserData.House.CubicMeters.Item3.ToString()}";
-            Train.Text = m_UserData.PMNUDayScore.Item2.ToString();
-            Bus.Text = m_UserData.PMNUDayScore.Item3.ToString();
-            Bicycle.Text = m_UserData.PMNUDayScore.Item1.ToString();
-            Car.Text = m_UserData.PMNUDayScore.Item4.ToString();
         }
     }
 }

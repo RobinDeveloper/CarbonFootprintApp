@@ -13,16 +13,4 @@
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="TransportScreen.xaml.cs">
-        <DependentUpon>TransportScreen.xaml</DependentUpon>
-      </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <EmbeddedResource Update="TransportScreen.xaml">
-        <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      </EmbeddedResource>
-    </ItemGroup>
 </Project>
