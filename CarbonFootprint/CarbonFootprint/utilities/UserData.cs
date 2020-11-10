@@ -2,6 +2,14 @@
 
 namespace CarbonFootprint.utilities
 {
+
+    public enum PositivityRating
+    {
+        Positive,
+        Medium,
+        Negative,
+        Unkown
+    }
     public struct UserData
     {
         public string Name;

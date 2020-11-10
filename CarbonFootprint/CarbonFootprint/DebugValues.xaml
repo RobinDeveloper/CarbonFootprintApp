@@ -13,6 +13,10 @@
                 <Label x:Name="CarType" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
                 <Label x:Name="HouseEnergy" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
                 <Label x:Name="CubicVolume" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+                <Label x:Name="Train" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+                <Label x:Name="Bicycle" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+                <Label x:Name="Bus" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+                <Label x:Name="Car" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

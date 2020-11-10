@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarbonFootprint.TransportScreen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="TransportName" Text="Transport" HorizontalTextAlignment ="Center" Grid.Row="0" Grid.Column="1"/>
+                <Button x:Name="ButtonHomeScreen" Text="&lt;" Clicked="GoToMainScreen" Grid.Row="0" Grid.Column="0"/>
+            </Grid>
+            <Label x:Name="SumCarbon" Text="" />
+            <Button x:Name="BicycleButton" Text="Bicycle" Clicked="AddBicycleDistance"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="BicycleName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="BicycleDistance" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+            <Button x:Name="TrainButton" Text="Train" Clicked="AddTrainDistance"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="TrainName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="TrainDistance" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+            <Button x:Name="BusButton" Text="Bus" Clicked="AddBusDistance"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="BusName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="BusDistance" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+            <Button x:Name="CarButton" Text="Car" Clicked="AddCarDistance"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="CarName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="CarDistance" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
