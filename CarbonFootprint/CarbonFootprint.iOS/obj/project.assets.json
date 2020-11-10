@@ -890,39 +890,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\teunv\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Robin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
+      "projectUniqueName": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
       "projectName": "CarbonFootprint.iOS",
-      "projectPath": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
-      "packagesPath": "C:\\Users\\teunv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint.iOS\\obj\\",
+      "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
+      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+      "outputPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\teunv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
-              "projectPath": "C:\\Users\\teunv\\OneDrive\\Documenten\\Fontys\\Proftaak\\CarbonFootprintApp\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj"
+            "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
+              "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj"
             }
           }
         }

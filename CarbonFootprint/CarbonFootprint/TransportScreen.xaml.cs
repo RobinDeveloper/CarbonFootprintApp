@@ -33,89 +33,71 @@ namespace CarbonFootprint
 
         private void AddBicycleDistance(object _sender, EventArgs _e)
         {
-            double distanceRoute;
+            double distanceBicycle = DistanceCheck(BicycleDistance.Text, "Distance is an incorrect value");
+            m_CarbonBicycle = (float) CalculateCarbonExhaust(0, distanceBicycle);
 
-            if (!Double.TryParse(BicycleDistance.Text, out distanceRoute))
-            {
-                DisplayAlert("Warning", "Place a distance", "OK");
-            }
-            else
-            {
-                m_CarbonBicycle = 0;
-                TotalSumCarbon(m_CarbonBicycle, PositivityRating.Positive);
-                UploadData();
-            }
+            TotalSumCarbon(m_CarbonBicycle, PositivityRating.Positive);
         }
 
         private void AddTrainDistance(object _sender, EventArgs _e)
         {
-            double distanceTrain;
-
-            if (!double.TryParse(TrainDistance.Text, out distanceTrain))
-            {
-                DisplayAlert("Warning", "Place a distance", "OK");
-            }
-            else
-            {
-                m_CarbonTrain = 0;
-                TotalSumCarbon(m_CarbonTrain, PositivityRating.Positive);
-                UploadData();
-            }
+            double distanceTrain = DistanceCheck(TrainDistance.Text, "Distance is an incorrect value");
+            m_CarbonTrain = (float) CalculateCarbonExhaust(0, distanceTrain);
+            TotalSumCarbon(m_CarbonTrain, PositivityRating.Positive);
         }
 
         private void AddBusDistance(object _sender, EventArgs _e)
         {
-            float distanceBus;
-
-            if(!float.TryParse(BusDistance.Text, out distanceBus))
-            {
-                DisplayAlert("Warning", "Place a distance", "OK");
-            }
-            else
-            {
-                m_CarbonBus = 0.137f * distanceBus;
-                TotalSumCarbon(m_CarbonBus, PositivityRating.Medium);
-                UploadData();
-            }
+            double distanceBus = DistanceCheck(BusDistance.Text, "Distance is an incorrect value");
+            m_CarbonBus = (float) CalculateCarbonExhaust(0.137, distanceBus);
+            TotalSumCarbon(m_CarbonBus, PositivityRating.Medium);
         }
 
         private void AddCarDistance(object _sender, EventArgs _e)
         {
-            float distanceCar;
+            double distanceCar = DistanceCheck(CarDistance.Text, "Distance is an incorrect value");
             int carConsumption = m_UserData.Car.GasMilage;
 
-            if(!float.TryParse(CarDistance.Text, out distanceCar))
-            {
-                DisplayAlert("Warning", "Place a distance", "OK");
-            }
-            else
-            {
+
                 switch (m_UserData.Car.CarEnergyType)
                 {
                     case Car.CarType.Hybrid:
-                        m_CarbonCar = 0.326f * (distanceCar / carConsumption);
+                        m_CarbonCar = (float)CalculateCarbonExhaust(0.326, (distanceCar / carConsumption));
                         TotalSumCarbon(m_CarbonCar, PositivityRating.Medium);
-                        UploadData();
                         break;
                     case Car.CarType.Gas:
-                        m_CarbonCar = 0.652f * (distanceCar / carConsumption);
+                        m_CarbonCar = (float)CalculateCarbonExhaust(0.652, (distanceCar / carConsumption));
                         TotalSumCarbon(m_CarbonCar, PositivityRating.Negative);
-                        UploadData();
                         break;
                     case Car.CarType.Diesel:
-                        m_CarbonCar = 0.72f * (distanceCar / carConsumption);
-                        TotalSumCarbon(m_CarbonCar, PositivityRating.Negative);
-                        UploadData();
+                        m_CarbonCar = (float)CalculateCarbonExhaust(0.72, (distanceCar / carConsumption));
+                        TotalSumCarbon(m_CarbonCar, PositivityRating.Negative); 
                         break;
                     case Car.CarType.Electric:
-                        m_CarbonCar = 0 * (distanceCar / carConsumption);
-                        TotalSumCarbon(m_CarbonCar, PositivityRating.Positive);
-                        UploadData();
+                        m_CarbonCar = (float)CalculateCarbonExhaust(0, (distanceCar / carConsumption));
+                        TotalSumCarbon(m_CarbonCar, PositivityRating.Positive); 
                         break;
                 }
-            }
+            
+        }
+        
+        private double DistanceCheck(string _text, string _warningTitle)
+        {
+            double result;
+            
+            if (double.TryParse(_text, out result))
+                return result;
+            
+            
+            DisplayAlert(_warningTitle, "Place a distance", "OK");
+            return Double.NaN;
         }
 
+        private double CalculateCarbonExhaust(double _multiplyValue, double _distance)
+        {
+            return _multiplyValue * _distance;
+        }
+        
         private void TotalSumCarbon(float _carbon, PositivityRating _rating)
         {
             switch(_rating)
@@ -156,10 +138,13 @@ namespace CarbonFootprint
                            (int)_carbon
                        );
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(_rating), _rating, null);
             }
 
             float totalCarbon = _carbon;
-            SumCarbon.Text = "Your emission for the previous travel was: " + totalCarbon;
+            SumCarbon.Text = "Your emission for the previous travel was: " + totalCarbon.ToString();
+            UploadData();
         }
 
         private void UploadData()
