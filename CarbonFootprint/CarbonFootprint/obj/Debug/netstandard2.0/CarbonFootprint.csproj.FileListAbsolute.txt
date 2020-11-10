@@ -13,4 +13,3 @@ D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstan
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\SettingScreen.xaml.g.cs
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\DebugValues.xaml.g.cs
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\HomeScreen.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\TransportScreen.xaml.g.cs
