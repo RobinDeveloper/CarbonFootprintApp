@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CarbonFootprint.DataCollection;
 using CarbonFootprint.utilities;
-using Syncfusion.SfChart.XForms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,11 +14,40 @@ namespace CarbonFootprint
         
         public HomeScreen()
         {
-            //m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
-            //string nameFieldText = $"Hi Robin, \n Weclome to your carbon footprint homepage";
-            //NameLabel.Text = nameFieldText;
-            
             InitializeComponent();
+
+            LabelField();
+        }
+
+        private void LabelField()
+        {
+            m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            string nameFieldText = $"Hi Robin, \n Weclome to your carbon footprint homepage";
+            NameLabel.Text = nameFieldText;
+        }
+
+        private async void PageButtonClicked(object _sender, EventArgs _e)
+        {
+            Button button = (Button) _sender;
+            string classID = button.ClassId;
+
+            switch (classID)
+            {
+                case "Transport":
+                    
+                    break;
+                case "Food":
+                    break;
+                case "Products":
+                    break;
+                case "Regulars":
+                    break;
+                case "Settings":
+                    await Navigation.PushAsync(new SettingScreen());
+                    break;
+                default:
+                    break;
+            }
         }
     }
     

@@ -7,7 +7,7 @@
              x:Class="CarbonFootprint.HomeScreen">
    <ContentPage.Content>
        <StackLayout>
-           <Label Text="Hi Robin, \n Weclome to your carbon footprint homepage"/>
+           <Label x:Name="NameLabel" Text="Hi Robin, Weclome to your carbon footprint homepae"/>
            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
             <chart:SfChart.BindingContext>
@@ -160,6 +160,11 @@
                     </chart:PieSeries>
                 </chart:SfChart.Series>
             </chart:SfChart>
+           <Button Text="Transport" x:Name="TransportButton" ClassId="Transport" Clicked="PageButtonClicked"/>
+           <Button Text="Food"  x:Name="FoodButton" ClassId="Food" Clicked="PageButtonClicked"/>
+           <Button Text="Products"  x:Name="ProductsButton" ClassId="Products" Clicked="PageButtonClicked"/>
+           <Button Text="Regulars"  x:Name="RegularsButton" ClassId="Regulars" Clicked="PageButtonClicked"/>
+           <Button Text="Settings"  x:Name="SettingsButton" ClassId="Settings" Clicked="PageButtonClicked"/>
        </StackLayout>
    </ContentPage.Content>
 </ContentPage>
