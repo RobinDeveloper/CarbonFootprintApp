@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CarbonFootprint.DataCollection;
+using CarbonFootprint.utilities;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
@@ -15,14 +17,18 @@ namespace CarbonFootprint
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TransportScreen : ContentPage
     {
-        private double m_CarbonBicycle;
-        private double m_CarbonTrain;
-        private double m_CarbonBus;
-        private double m_CarbonCar;
+        private float m_CarbonBicycle;
+        private float m_CarbonTrain;
+        private float m_CarbonBus;
+        private float m_CarbonCar;
+
+        private UserData m_UserData;
 
         public TransportScreen()
         {
             InitializeComponent();
+            m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            PopulateUserData();
         }
 
         private void AddBicycleDistance(object _sender, EventArgs _e)
@@ -36,7 +42,8 @@ namespace CarbonFootprint
             else
             {
                 m_CarbonBicycle = 0;
-                TotalSumCarbon(m_CarbonBicycle);
+                TotalSumCarbon(m_CarbonBicycle, PositivityRating.Positive);
+                UploadData();
             }
         }
 
@@ -51,63 +58,133 @@ namespace CarbonFootprint
             else
             {
                 m_CarbonTrain = 0;
-                TotalSumCarbon(m_CarbonTrain);
+                TotalSumCarbon(m_CarbonTrain, PositivityRating.Positive);
+                UploadData();
             }
         }
 
         private void AddBusDistance(object _sender, EventArgs _e)
         {
-            double distanceBus;
+            float distanceBus;
 
-            if(!double.TryParse(BusDistance.Text, out distanceBus))
+            if(!float.TryParse(BusDistance.Text, out distanceBus))
             {
                 DisplayAlert("Warning", "Place a distance", "OK");
             }
             else
             {
-                m_CarbonBus = 0.137 * distanceBus;
-                TotalSumCarbon(m_CarbonBus);
+                m_CarbonBus = 0.137f * distanceBus;
+                TotalSumCarbon(m_CarbonBus, PositivityRating.Medium);
+                UploadData();
             }
         }
 
         private void AddCarDistance(object _sender, EventArgs _e)
         {
-            double distanceCar;
-            int carConsumption = Convert.ToInt32(InputConsumption.Text);
+            float distanceCar;
+            int carConsumption = m_UserData.Car.GasMilage;
 
-            if(!double.TryParse(CarDistance.Text, out distanceCar))
+            if(!float.TryParse(CarDistance.Text, out distanceCar))
             {
                 DisplayAlert("Warning", "Place a distance", "OK");
             }
             else
             {
-                if(InputCartype.Text == "Hybrid")
+                switch (m_UserData.Car.CarEnergyType)
                 {
-                    m_CarbonCar = 0.326 * (distanceCar / carConsumption);
-                    TotalSumCarbon(m_CarbonCar);
-                }
-                else if(InputCartype.Text == "Gas")
-                {
-                    m_CarbonCar = 0.652 * (distanceCar / carConsumption);
-                    TotalSumCarbon(m_CarbonCar);
-                }
-                else if(InputCartype.Text == "Diesel")
-                {
-                    m_CarbonCar = 0.72 * (distanceCar / carConsumption);
-                    TotalSumCarbon(m_CarbonCar);
-                }
-                else if(InputCartype.Text == "Electric")
-                {
-                    m_CarbonCar = 0 * (distanceCar / carConsumption);
-                    TotalSumCarbon(m_CarbonCar);
+                    case Car.CarType.Hybrid:
+                        m_CarbonCar = 0.326f * (distanceCar / carConsumption);
+                        TotalSumCarbon(m_CarbonCar, PositivityRating.Medium);
+                        UploadData();
+                        break;
+                    case Car.CarType.Gas:
+                        m_CarbonCar = 0.652f * (distanceCar / carConsumption);
+                        TotalSumCarbon(m_CarbonCar, PositivityRating.Negative);
+                        UploadData();
+                        break;
+                    case Car.CarType.Diesel:
+                        m_CarbonCar = 0.72f * (distanceCar / carConsumption);
+                        TotalSumCarbon(m_CarbonCar, PositivityRating.Negative);
+                        UploadData();
+                        break;
+                    case Car.CarType.Electric:
+                        m_CarbonCar = 0 * (distanceCar / carConsumption);
+                        TotalSumCarbon(m_CarbonCar, PositivityRating.Positive);
+                        UploadData();
+                        break;
                 }
             }
         }
 
-        private void TotalSumCarbon(double Carbon)
+        private void TotalSumCarbon(float _carbon, PositivityRating _rating)
         {
-            double TotalCarbon = Carbon;
-            SumCarbon.Text = "Your emission for the previous travel was: " + TotalCarbon;
+            switch(_rating)
+            {
+                case PositivityRating.Positive:
+                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
+                        (
+                            (int)_carbon,
+                            m_UserData.PMNUDayScore.Item2,
+                            m_UserData.PMNUDayScore.Item3,
+                            m_UserData.PMNUDayScore.Item4
+                        );
+                    break;
+                case PositivityRating.Medium:
+                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
+                        (
+                            m_UserData.PMNUDayScore.Item1,
+                           (int)_carbon,
+                            m_UserData.PMNUDayScore.Item3,
+                            m_UserData.PMNUDayScore.Item4
+                        );
+                    break;
+                case PositivityRating.Negative:
+                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
+                       (
+                           m_UserData.PMNUDayScore.Item1,
+                            m_UserData.PMNUDayScore.Item2,
+                          (int)_carbon,
+                           m_UserData.PMNUDayScore.Item4
+                       );
+                    break;
+                case PositivityRating.Unkown:
+                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
+                       (
+                           m_UserData.PMNUDayScore.Item1,
+                            m_UserData.PMNUDayScore.Item2,
+                           m_UserData.PMNUDayScore.Item3,
+                           (int)_carbon
+                       );
+                    break;
+            }
+
+            float totalCarbon = _carbon;
+            SumCarbon.Text = "Your emission for the previous travel was: " + totalCarbon;
+        }
+
+        private void UploadData()
+        {
+            Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
+        }
+
+        private void PopulateUserData()
+        {
+            if (m_UserData.PMNUDayScore == null)
+                m_UserData.PMNUDayScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
+
+            if (m_UserData.PMNUWeekScore == null)
+                m_UserData.PMNUWeekScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
+
+            if (m_UserData.PMNUMonthScore == null)
+                m_UserData.PMNUMonthScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
+
+            if (m_UserData.PMNUYearScore == null)
+                m_UserData.PMNUYearScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
+        }
+
+        private async void GoToMainScreen(object _sender, EventArgs _e)
+        {
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }

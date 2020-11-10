@@ -824,6 +824,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
           "Xamarin.Forms": "4.4.0.991640"
         },
         "compile": {

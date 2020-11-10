@@ -440,7 +440,6 @@ C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFoot
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\bin\Debug\com.companyname.CarbonFootprint-Signed.apk.idsig
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.dll
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.pdb
-C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.dll.mdb
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\build.props
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\adb.props
@@ -479,6 +478,7 @@ C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFoot
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\mscorlib.pdb
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\android\assets\System.Core.dll
@@ -863,3 +863,4 @@ C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFoot
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\teunv\OneDrive\Documenten\Fontys\Proftaak\CarbonFootprintApp\CarbonFootprint\CarbonFootprint.Android\bin\Debug\CarbonFootprint.dll.mdb

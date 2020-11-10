@@ -4,7 +4,19 @@
              x:Class="CarbonFootprint.TransportScreen">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="TransportName" Text="Transport" HorizontalTextAlignment ="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="TransportName" Text="Transport" HorizontalTextAlignment ="Center" Grid.Row="0" Grid.Column="1"/>
+                <Button x:Name="ButtonHomeScreen" Text="&lt;" Clicked="GoToMainScreen" Grid.Row="0" Grid.Column="0"/>
+            </Grid>
             <Label x:Name="SumCarbon" Text="" />
             <Button x:Name="BicycleButton" Text="Bicycle" Clicked="AddBicycleDistance"/>
             <Grid>
@@ -66,8 +78,6 @@
                 <Entry x:Name="CarDistance" Grid.Row="0" Grid.Column="1"/>
                 <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
             </Grid>
-            <Entry x:Name="InputCartype"/>
-            <Entry x:Name="InputConsumption"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
