@@ -72,11 +72,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-<<<<<<< HEAD
-	.asciz	"aa30e2f4-cd10-4955-8bd6-89d5f2a58909"
-=======
-	.asciz	"13ea1143-093b-43b9-88f8-f3aa590e9f67"
->>>>>>> Homescreen
+	.asciz	"21abe826-9640-4ce0-9683-1412e41ff3f8"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

@@ -16,7 +16,7 @@ namespace CarbonFootprint
             Jsonhandler handlr = new Jsonhandler();
             InitializeComponent();
             if (Jsonhandler.Instance.CheckIfFileExists("userdata.json"))
-                MainPage = new NavigationPage(new TransportScreen());
+                MainPage = new NavigationPage(new HomeScreen());
             else
                 MainPage = new NavigationPage(new SettingScreen());
         }

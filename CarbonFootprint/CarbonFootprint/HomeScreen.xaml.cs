@@ -34,7 +34,7 @@ namespace CarbonFootprint
             switch (classID)
             {
                 case "Transport":
-                    
+                    await Navigation.PushAsync(new TransportScreen());
                     break;
                 case "Food":
                     break;

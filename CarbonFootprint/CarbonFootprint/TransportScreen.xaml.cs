@@ -169,7 +169,7 @@ namespace CarbonFootprint
 
         private async void GoToMainScreen(object _sender, EventArgs _e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new HomeScreen());
         }
     }
 }
