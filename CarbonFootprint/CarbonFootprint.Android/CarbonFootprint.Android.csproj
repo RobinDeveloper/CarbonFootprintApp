@@ -47,6 +47,7 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.59" />
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
         <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
         <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />

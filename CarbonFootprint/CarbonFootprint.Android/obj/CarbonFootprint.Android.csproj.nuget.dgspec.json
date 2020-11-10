@@ -40,6 +40,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[18.2.0.59, )"
+            },
             "Xamarin.Android.Support.Design": {
               "target": "Package",
               "version": "[28.0.0.3, )"
@@ -109,6 +113,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[18.2.0.59, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

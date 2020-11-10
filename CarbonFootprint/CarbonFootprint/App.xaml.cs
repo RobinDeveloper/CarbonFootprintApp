@@ -15,7 +15,7 @@ namespace CarbonFootprint
             m_Jsonhandler = new Jsonhandler();
             InitializeComponent();
 
-            MainPage = new SettingScreen();
+            MainPage = new HomeScreen();
         }
 
         protected override void OnStart()
