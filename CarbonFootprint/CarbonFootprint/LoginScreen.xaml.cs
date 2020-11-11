@@ -19,9 +19,18 @@ namespace CarbonFootprint
 
         private void LoginClicked(object _sender, EventArgs _e)
         {
-            if(Username.Text.ToLower() == "admin")
-                if (Password.Text.ToLower() == "admin")
+            switch (Username.Text.ToLower())
+            {
+                case "admin" when Password.Text.ToLower() == "admin":
                     MoveToNewPage();
+                    break;
+                case "admin":
+                    DisplayAlert("Invalid", "username or password is invalid", "Ok");
+                    break;
+                default:
+                    DisplayAlert("Invalid", "username or password is invalid", "Ok");
+                    break;
+            }
         }
 
         private void MoveToNewPage()
