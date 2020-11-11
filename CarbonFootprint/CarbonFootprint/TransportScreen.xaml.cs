@@ -28,7 +28,6 @@ namespace CarbonFootprint
         {
             InitializeComponent();
             m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
-            PopulateUserData();
         }
 
         private void AddBicycleDistance(object _sender, EventArgs _e)
@@ -103,40 +102,16 @@ namespace CarbonFootprint
             switch(_rating)
             {
                 case PositivityRating.Positive:
-                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
-                        (
-                            m_UserData.PMNUDayScore.Item1 + (int)_carbon,
-                            m_UserData.PMNUDayScore.Item2,
-                            m_UserData.PMNUDayScore.Item3,
-                            m_UserData.PMNUDayScore.Item4
-                        );
+                    m_UserData.PMNUDayScore.Positive += (int)_carbon;
                     break;
                 case PositivityRating.Medium:
-                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
-                        (
-                            m_UserData.PMNUDayScore.Item1,
-                            m_UserData.PMNUDayScore.Item2 + (int)_carbon,
-                            m_UserData.PMNUDayScore.Item3,
-                            m_UserData.PMNUDayScore.Item4
-                        );
+                    m_UserData.PMNUDayScore.Medium += (int)_carbon;
                     break;
                 case PositivityRating.Negative:
-                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
-                       (
-                           m_UserData.PMNUDayScore.Item1,
-                           m_UserData.PMNUDayScore.Item2,
-                           m_UserData.PMNUDayScore.Item3 + (int)_carbon,
-                           m_UserData.PMNUDayScore.Item4
-                       );
+                    m_UserData.PMNUDayScore.Negative += (int)_carbon;
                     break;
                 case PositivityRating.Unkown:
-                    m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
-                       (
-                           m_UserData.PMNUDayScore.Item1,
-                           m_UserData.PMNUDayScore.Item2,
-                           m_UserData.PMNUDayScore.Item3,
-                           m_UserData.PMNUDayScore.Item4 + (int)_carbon
-                       );
+                    m_UserData.PMNUDayScore.Unkowm += (int)_carbon;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(_rating), _rating, null);
@@ -150,21 +125,6 @@ namespace CarbonFootprint
         private void UploadData()
         {
             Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
-        }
-
-        private void PopulateUserData()
-        {
-            if (m_UserData.PMNUDayScore == null)
-                m_UserData.PMNUDayScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
-
-            if (m_UserData.PMNUWeekScore == null)
-                m_UserData.PMNUWeekScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
-
-            if (m_UserData.PMNUMonthScore == null)
-                m_UserData.PMNUMonthScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
-
-            if (m_UserData.PMNUYearScore == null)
-                m_UserData.PMNUYearScore = new Tuple<int, int, int, int>(0, 0, 0, 0);
         }
 
         private async void GoToMainScreen(object _sender, EventArgs _e)

@@ -63,55 +63,38 @@ namespace CarbonFootprint
         {
             if (!Jsonhandler.Instance.CheckIfFileExists("userdata.json")) return;
             m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
-                        
-            PopulateUserData();
-            
+
             Data = new List<PieData>()
             {
-                new PieData(m_UserData.PMNUDayScore.Item1, "Positive", Color.Green),
-                new PieData(m_UserData.PMNUDayScore.Item2, "Medium", Color.Yellow),
-                new PieData(m_UserData.PMNUDayScore.Item3, "Negative", Color.Red),
-                new PieData(m_UserData.PMNUDayScore.Item4, "Unkown", Color.Gray)
+                new PieData(m_UserData.PMNUDayScore.Positive, "Positive", Color.Green),
+                new PieData(m_UserData.PMNUDayScore.Medium, "Medium", Color.Yellow),
+                new PieData(m_UserData.PMNUDayScore.Negative, "Negative", Color.Red),
+                new PieData(m_UserData.PMNUDayScore.Unkowm, "Unkown", Color.Gray)
             };
             
             Data2 = new List<PieData>()
             {
-                new PieData(m_UserData.PMNUWeekScore.Item1, "Positive", Color.Green),
-                new PieData(m_UserData.PMNUWeekScore.Item2, "Medium", Color.Yellow),
-                new PieData(m_UserData.PMNUWeekScore.Item3, "Negative", Color.Red),
-                new PieData(m_UserData.PMNUWeekScore.Item4, "Unkown", Color.Gray)
+                new PieData(m_UserData.PMNUWeekScore.Positive, "Positive", Color.Green),
+                new PieData(m_UserData.PMNUWeekScore.Medium, "Medium", Color.Yellow),
+                new PieData(m_UserData.PMNUWeekScore.Negative, "Negative", Color.Red),
+                new PieData(m_UserData.PMNUWeekScore.Unkowm, "Unkown", Color.Gray)
             };
             
             Data3 = new List<PieData>()
             {
-                new PieData(m_UserData.PMNUMonthScore.Item1, "Positive", Color.Green),
-                new PieData(m_UserData.PMNUMonthScore.Item2, "Medium", Color.Yellow),
-                new PieData(m_UserData.PMNUMonthScore.Item3, "Negative", Color.Red),
-                new PieData(m_UserData.PMNUMonthScore.Item4, "Unkown", Color.Gray)
+                new PieData(m_UserData.PMNUMonthScore.Positive, "Positive", Color.Green),
+                new PieData(m_UserData.PMNUMonthScore.Medium, "Medium", Color.Yellow),
+                new PieData(m_UserData.PMNUMonthScore.Negative, "Negative", Color.Red),
+                new PieData(m_UserData.PMNUMonthScore.Unkowm, "Unkown", Color.Gray)
             };
             
             Data4 = new List<PieData>()
             {
-                new PieData(m_UserData.PMNUYearScore.Item1, "Positive", Color.Green),
-                new PieData(m_UserData.PMNUYearScore.Item2, "Medium", Color.Yellow),
-                new PieData(m_UserData.PMNUYearScore.Item3, "Negative", Color.Red),
-                new PieData(m_UserData.PMNUYearScore.Item4, "Unkown", Color.Gray)
+                new PieData(m_UserData.PMNUYearScore.Positive, "Positive", Color.Green),
+                new PieData(m_UserData.PMNUYearScore.Medium, "Medium", Color.Yellow),
+                new PieData(m_UserData.PMNUYearScore.Negative, "Negative", Color.Red),
+                new PieData(m_UserData.PMNUYearScore.Unkowm, "Unkown", Color.Gray)
             };
-        }
-        
-        private void PopulateUserData()
-        {
-            if(m_UserData.PMNUDayScore == null)
-                m_UserData.PMNUDayScore = new Tuple<int, int, int, int>(10,41,12,0);
-    
-            if(m_UserData.PMNUWeekScore == null)
-                m_UserData.PMNUWeekScore = new Tuple<int, int, int, int>(12,65,122,0);
-    
-            if(m_UserData.PMNUMonthScore == null)
-                m_UserData.PMNUMonthScore = new Tuple<int, int, int, int>(25,9,56,56);
-    
-            if(m_UserData.PMNUYearScore == null)
-                m_UserData.PMNUYearScore = new Tuple<int, int, int, int>(87,50,77,10);
         }
     }
 
