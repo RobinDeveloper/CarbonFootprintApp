@@ -105,7 +105,7 @@ namespace CarbonFootprint
                 case PositivityRating.Positive:
                     m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
                         (
-                            (int)_carbon,
+                            m_UserData.PMNUDayScore.Item1 + (int)_carbon,
                             m_UserData.PMNUDayScore.Item2,
                             m_UserData.PMNUDayScore.Item3,
                             m_UserData.PMNUDayScore.Item4
@@ -115,7 +115,7 @@ namespace CarbonFootprint
                     m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
                         (
                             m_UserData.PMNUDayScore.Item1,
-                           (int)_carbon,
+                            m_UserData.PMNUDayScore.Item2 + (int)_carbon,
                             m_UserData.PMNUDayScore.Item3,
                             m_UserData.PMNUDayScore.Item4
                         );
@@ -124,8 +124,8 @@ namespace CarbonFootprint
                     m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
                        (
                            m_UserData.PMNUDayScore.Item1,
-                            m_UserData.PMNUDayScore.Item2,
-                          (int)_carbon,
+                           m_UserData.PMNUDayScore.Item2,
+                           m_UserData.PMNUDayScore.Item3 + (int)_carbon,
                            m_UserData.PMNUDayScore.Item4
                        );
                     break;
@@ -133,9 +133,9 @@ namespace CarbonFootprint
                     m_UserData.PMNUDayScore = new Tuple<int, int, int, int>
                        (
                            m_UserData.PMNUDayScore.Item1,
-                            m_UserData.PMNUDayScore.Item2,
+                           m_UserData.PMNUDayScore.Item2,
                            m_UserData.PMNUDayScore.Item3,
-                           (int)_carbon
+                           m_UserData.PMNUDayScore.Item4 + (int)_carbon
                        );
                     break;
                 default:

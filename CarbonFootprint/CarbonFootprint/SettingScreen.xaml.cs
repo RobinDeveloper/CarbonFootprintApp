@@ -159,16 +159,16 @@ namespace CarbonFootprint
         private void PopulateUserData()
         {
             if(m_UserData.PMNUDayScore == null)
-                m_UserData.PMNUDayScore = new Tuple<int, int, int, int>(10,41,12,0);
+                m_UserData.PMNUDayScore = new Tuple<int, int, int, int>(0,0,0,0);
     
             if(m_UserData.PMNUWeekScore == null)
-                m_UserData.PMNUWeekScore = new Tuple<int, int, int, int>(12,65,122,0);
+                m_UserData.PMNUWeekScore = new Tuple<int, int, int, int>(0,0,0,0);
     
             if(m_UserData.PMNUMonthScore == null)
-                m_UserData.PMNUMonthScore = new Tuple<int, int, int, int>(25,9,56,56);
+                m_UserData.PMNUMonthScore = new Tuple<int, int, int, int>(0,0,0,0);
     
             if(m_UserData.PMNUYearScore == null)
-                m_UserData.PMNUYearScore = new Tuple<int, int, int, int>(87,50,77,10);
+                m_UserData.PMNUYearScore = new Tuple<int, int, int, int>(0,0,0,0);
         }
     }
 }
