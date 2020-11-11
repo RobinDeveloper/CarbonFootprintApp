@@ -65,7 +65,7 @@ namespace CarbonFootprint
                         m_CarbonCar = (float)CalculateCarbonExhaust(0.326, (distanceCar / carConsumption));
                         TotalSumCarbon(m_CarbonCar, PositivityRating.Medium);
                         break;
-                    case Car.CarType.Gas:
+                    case Car.CarType.LPG:
                         m_CarbonCar = (float)CalculateCarbonExhaust(0.652, (distanceCar / carConsumption));
                         TotalSumCarbon(m_CarbonCar, PositivityRating.Negative);
                         break;
