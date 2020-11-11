@@ -39,6 +39,7 @@ namespace CarbonFootprint
                 case "Food":
                     break;
                 case "Products":
+                    await Navigation.PushAsync(new ProductScreen());
                     break;
                 case "Regulars":
                     break;
