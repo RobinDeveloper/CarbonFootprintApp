@@ -5,7 +5,7 @@
         public enum CarType
         {
             Hybrid,
-            Gas,
+            LPG,
             Diesel,
             Electric,
             Default

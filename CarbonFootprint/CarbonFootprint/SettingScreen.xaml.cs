@@ -24,7 +24,7 @@ namespace CarbonFootprint
         private Dictionary<string, Car.CarType> m_NameToCarType = new Dictionary<string, Car.CarType>
         {
             {"Hybrid", Car.CarType.Hybrid},
-            {"Gas", Car.CarType.Gas},
+            {"LPG", Car.CarType.LPG},
             {"Diesel", Car.CarType.Diesel},
             {"Electric", Car.CarType.Electric}
         };
@@ -37,6 +37,12 @@ namespace CarbonFootprint
             
             if (m_FileExist)
                 m_PremadeUserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            else
+            {
+                m_UserData = new UserData();
+                PopulateUserData();                
+            }
+            
             
             foreach (string typeName in m_NameToCarType.Keys)
             {
@@ -48,6 +54,7 @@ namespace CarbonFootprint
         {
             CreateUserData();
             Jsonhandler.Instance.UploadJson("userdata.json", _toSerialize: m_UserData);
+            SettingScreenText.Text = "Data has been uploaded";
         }
 
         private void CreateUserData()
@@ -147,6 +154,21 @@ namespace CarbonFootprint
             }
 
             return output;
+        }
+        
+        private void PopulateUserData()
+        {
+            if(m_UserData.PMNUDayScore == null)
+                m_UserData.PMNUDayScore = new Tuple<int, int, int, int>(10,41,12,0);
+    
+            if(m_UserData.PMNUWeekScore == null)
+                m_UserData.PMNUWeekScore = new Tuple<int, int, int, int>(12,65,122,0);
+    
+            if(m_UserData.PMNUMonthScore == null)
+                m_UserData.PMNUMonthScore = new Tuple<int, int, int, int>(25,9,56,56);
+    
+            if(m_UserData.PMNUYearScore == null)
+                m_UserData.PMNUYearScore = new Tuple<int, int, int, int>(87,50,77,10);
         }
     }
 }
