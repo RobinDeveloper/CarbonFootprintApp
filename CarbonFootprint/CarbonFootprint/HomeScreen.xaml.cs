@@ -41,6 +41,7 @@ namespace CarbonFootprint
                 case "Products":
                     break;
                 case "Regulars":
+                    await Navigation.PushAsync(new EveryDayScreen());
                     break;
                 case "Settings":
                     await Navigation.PushAsync(new SettingScreen());

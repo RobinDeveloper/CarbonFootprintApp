@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarbonFootprint.EveryDayScreen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Fixed Charges" HorizontalOptions="Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="CookingType" Text="Add" Grid.Column="1" Grid.Row="0" Clicked="AddCookingType"/>
+                <Picker x:Name="TypeOfGasCook" Title="Select a cooking style" Grid.Row="0" Grid.Column="0">
+                    <Picker.Items>
+                        <x:String>Gas</x:String>
+                        <x:String>Induction</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="TypeOfPet" Title="Select a pet" Grid.Row="1" Grid.Column="0">
+                    <Picker.Items>
+                        <x:String>Cat</x:String>
+                        <x:String>Dog</x:String>
+                        <x:String>Rabbit</x:String>
+                        <x:String>Fish</x:String>
+                        <x:String>Bird</x:String>
+                        <x:String>Horse</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button x:Name="PetType" Text="Add" Grid.Column="1" Grid.Row="1" Clicked="AddPetType"/>
+                <Button x:Name="RemovePet" Text="Remove" Grid.Row="1" Grid.Column="2" Clicked="RemovePetType"/>
+            </Grid>
+            <Label Text="Heating"/>
+            <Picker x:Name="HeatType" Title="Type of heating in your house">
+                <Picker.Items>
+                    <x:String>Wood</x:String>
+                    <x:String>Electricity</x:String>
+                    <x:String>Solar-energy</x:String>
+                    <x:String>Gas</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button x:Name="HeatingType" Text="Add" Clicked="AddHeatingType"/>
+            <Label Text="Electricity"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Stepper Maximum="100" Minimum="0" Increment="1" Value="1" ValueChanged="OnNewValue" Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="HousematesInput" Text="1" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Number of housemates: " Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="EverageDay" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Everage electricity &#10; usage per day: " Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start"/>
+                <Button x:Name="ElectricityUsage" Text="Add" Grid.Row="1" Grid.Column="2" Clicked="AddElectricityUse"/>
+            </Grid>
+            <Label x:Name="Test"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
