@@ -21,14 +21,14 @@ namespace CarbonFootprint.utilities
     public class UserData
     {
         public string Name;
-        public double ScoreToday;
         public PMNUScore PMNUDayScore; //PMNU = positive medium negative unkown
-        public double ScoreWeek;
         public PMNUScore PMNUWeekScore;
-        public double ScoreMonth;
         public PMNUScore PMNUMonthScore;
-        public double ScoreYear;
         public PMNUScore PMNUYearScore;
+        public double ProdcutScore;
+        public double TransportScore;
+        public double EverydayScore;
+        public double FoodScore;
         public Car Car;
         public House House;
     }
