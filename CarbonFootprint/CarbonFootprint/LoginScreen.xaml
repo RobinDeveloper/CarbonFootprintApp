@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarbonFootprint.LoginScreen"
+             BackgroundImage = "achtergrondnocopyright.png">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source= "logologin.png" 
+                   HeightRequest="200"/> 
+
+            <Entry x:Name="Username" 
+                   Placeholder="Username" 
+                   BackgroundColor="White"/>
+            
+            <Entry x:Name="Password" 
+                   Placeholder="Password" 
+                   BackgroundColor="White"
+                   IsPassword="true"/>
+
+            <Button x:Name="Login" 
+                    Width="50" 
+                    Text="Login" 
+                    Clicked="LoginClicked" 
+                    BackgroundColor="#13b51e"
+                    TextColor="White"
+                    CornerRadius="7"
+                    Font="Bold,17"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"/>
+
+            <Label Text="Forgot password?" 
+                   TextColor="#092d07" 
+                   Font="Bold,17" 
+                   HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Label Text="Don't have an account yet?" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center"
+                       Grid.Row="3"  
+                       TextColor="#092d07"
+                       Font="Bold,15"
+                       Grid.Column="0"/>
+                
+                <Button Text="Create account" 
+                       Grid.Row="4" 
+                       TextColor="White"
+                       Font="Bold,17"
+                       BackgroundColor="#355437"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
