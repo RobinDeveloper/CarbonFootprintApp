@@ -2,10 +2,50 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:carbonFootprint="clr-namespace:CarbonFootprint;assembly=CarbonFootprint"
              x:Class="CarbonFootprint.ProductScreen">
     <ContentPage.Content>
         <ScrollView>
         <StackLayout>
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.BindingContext>
+                    <carbonFootprint:ViewmodelProduct/>
+                </chart:SfChart.BindingContext>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title> 
+                    <chart:ChartTitle Text="Carbon footprint"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Rating"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Amount of emmision"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:PieSeries ItemsSource="{Binding Data}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                        <chart:PieSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:PieSeries.DataMarker>
+                    </chart:PieSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>

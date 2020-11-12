@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using CarbonFootprint.DataCollection;
 using CarbonFootprint.utilities;
 using Xamarin.Forms;
@@ -15,8 +16,19 @@ namespace CarbonFootprint
         public HomeScreen()
         {
             InitializeComponent();
-
+            CheckIfFocussed();
             LabelField();
+        }
+
+        private void CheckIfFocussed()
+        {
+            if (IsFocused)
+            {
+                Chart.BindingContext = new ViewModel();
+                Chart2.BindingContext = new ViewModel();
+                Chart3.BindingContext = new ViewModel();
+                Chart4.BindingContext = new ViewModel();
+            }
         }
 
         private void LabelField()
@@ -54,10 +66,10 @@ namespace CarbonFootprint
     
     public class ViewModel
     {
-        public List<PieData> Data { get; set; }
-        public List<PieData> Data2 { get; set; }
-        public List<PieData> Data3 { get; set; }
-        public List<PieData> Data4 { get; set; }
+        public ObservableCollection<PieData> Data { get; set; }
+        public ObservableCollection<PieData> Data2 { get; set; }
+        public ObservableCollection<PieData> Data3 { get; set; }
+        public ObservableCollection<PieData> Data4 { get; set; }
         
         private UserData m_UserData;
         public ViewModel()
@@ -65,7 +77,7 @@ namespace CarbonFootprint
             if (!Jsonhandler.Instance.CheckIfFileExists("userdata.json")) return;
             m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
 
-            Data = new List<PieData>()
+            Data = new ObservableCollection<PieData>()
             {
                 new PieData(m_UserData.PMNUDayScore.Positive, "Positive", Color.Green),
                 new PieData(m_UserData.PMNUDayScore.Medium, "Medium", Color.Yellow),
@@ -73,7 +85,7 @@ namespace CarbonFootprint
                 new PieData(m_UserData.PMNUDayScore.Unkowm, "Unkown", Color.Gray)
             };
             
-            Data2 = new List<PieData>()
+            Data2 = new ObservableCollection<PieData>()
             {
                 new PieData(m_UserData.PMNUWeekScore.Positive, "Positive", Color.Green),
                 new PieData(m_UserData.PMNUWeekScore.Medium, "Medium", Color.Yellow),
@@ -81,7 +93,7 @@ namespace CarbonFootprint
                 new PieData(m_UserData.PMNUWeekScore.Unkowm, "Unkown", Color.Gray)
             };
             
-            Data3 = new List<PieData>()
+            Data3 = new ObservableCollection<PieData>()
             {
                 new PieData(m_UserData.PMNUMonthScore.Positive, "Positive", Color.Green),
                 new PieData(m_UserData.PMNUMonthScore.Medium, "Medium", Color.Yellow),
@@ -89,7 +101,7 @@ namespace CarbonFootprint
                 new PieData(m_UserData.PMNUMonthScore.Unkowm, "Unkown", Color.Gray)
             };
             
-            Data4 = new List<PieData>()
+            Data4 = new ObservableCollection<PieData>()
             {
                 new PieData(m_UserData.PMNUYearScore.Positive, "Positive", Color.Green),
                 new PieData(m_UserData.PMNUYearScore.Medium, "Medium", Color.Yellow),

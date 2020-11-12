@@ -6,47 +6,10 @@
              xmlns:carbonFootprint="clr-namespace:CarbonFootprint;assembly=CarbonFootprint"
              x:Class="CarbonFootprint.HomeScreen">
    <ContentPage.Content>
-       <StackLayout>
-           <Label x:Name="NameLabel" Text="Hi Robin, Weclome to your carbon footprint homepae"/>
-           <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-
-            <chart:SfChart.BindingContext>
-                <carbonFootprint:ViewModel/>
-            </chart:SfChart.BindingContext>
-
-            <chart:SfChart.Legend>
-                <chart:ChartLegend />
-            </chart:SfChart.Legend>
-
-            <chart:SfChart.Title> 
-                <chart:ChartTitle Text="Chart"/>
-            </chart:SfChart.Title>
-
-            <chart:SfChart.PrimaryAxis>
-                <chart:CategoryAxis>
-                    <chart:CategoryAxis.Title>
-                        <chart:ChartAxisTitle Text="Rating"/>
-                    </chart:CategoryAxis.Title>
-                </chart:CategoryAxis>
-            </chart:SfChart.PrimaryAxis>
-
-            <chart:SfChart.SecondaryAxis>
-                <chart:NumericalAxis>
-                    <chart:NumericalAxis.Title>
-                        <chart:ChartAxisTitle Text="Amount of KW"/>
-                    </chart:NumericalAxis.Title>
-                </chart:NumericalAxis>
-            </chart:SfChart.SecondaryAxis>
-
-            <chart:SfChart.Series>
-                <chart:PieSeries ItemsSource="{Binding Data}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
-                    <chart:PieSeries.DataMarker>
-                        <chart:ChartDataMarker/>
-                    </chart:PieSeries.DataMarker>
-                </chart:PieSeries>
-            </chart:SfChart.Series>
-        </chart:SfChart>
-           <chart:SfChart x:Name="Chart2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+       <ScrollView HeightRequest="3000">
+           <StackLayout>
+               <Label x:Name="NameLabel" Text="Hi Robin, Weclome to your carbon footprint homepae"/>
+               <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
 
                 <chart:SfChart.BindingContext>
                     <carbonFootprint:ViewModel/>
@@ -57,7 +20,7 @@
                 </chart:SfChart.Legend>
 
                 <chart:SfChart.Title> 
-                    <chart:ChartTitle Text="Chart"/>
+                    <chart:ChartTitle Text="Day emmision"/>
                 </chart:SfChart.Title>
 
                 <chart:SfChart.PrimaryAxis>
@@ -77,94 +40,133 @@
                 </chart:SfChart.SecondaryAxis>
 
                 <chart:SfChart.Series>
-                    <chart:PieSeries ItemsSource="{Binding Data2}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                    <chart:PieSeries ItemsSource="{Binding Data}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
                         <chart:PieSeries.DataMarker>
                             <chart:ChartDataMarker/>
                         </chart:PieSeries.DataMarker>
                     </chart:PieSeries>
                 </chart:SfChart.Series>
             </chart:SfChart>
-           <chart:SfChart x:Name="Chart3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+               <chart:SfChart x:Name="Chart2" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
 
-                <chart:SfChart.BindingContext>
-                    <carbonFootprint:ViewModel/>
-                </chart:SfChart.BindingContext>
+                    <chart:SfChart.BindingContext>
+                        <carbonFootprint:ViewModel/>
+                    </chart:SfChart.BindingContext>
 
-                <chart:SfChart.Legend>
-                    <chart:ChartLegend />
-                </chart:SfChart.Legend>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
 
-                <chart:SfChart.Title> 
-                    <chart:ChartTitle Text="Chart"/>
-                </chart:SfChart.Title>
+                    <chart:SfChart.Title> 
+                        <chart:ChartTitle Text="Week emmision"/>
+                    </chart:SfChart.Title>
 
-                <chart:SfChart.PrimaryAxis>
-                    <chart:CategoryAxis>
-                        <chart:CategoryAxis.Title>
-                            <chart:ChartAxisTitle Text="Rating"/>
-                        </chart:CategoryAxis.Title>
-                    </chart:CategoryAxis>
-                </chart:SfChart.PrimaryAxis>
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Rating"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
 
-                <chart:SfChart.SecondaryAxis>
-                    <chart:NumericalAxis>
-                        <chart:NumericalAxis.Title>
-                            <chart:ChartAxisTitle Text="Amount of KW"/>
-                        </chart:NumericalAxis.Title>
-                    </chart:NumericalAxis>
-                </chart:SfChart.SecondaryAxis>
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Amount of KW"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
 
-                <chart:SfChart.Series>
-                    <chart:PieSeries ItemsSource="{Binding Data3}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
-                        <chart:PieSeries.DataMarker>
-                            <chart:ChartDataMarker/>
-                        </chart:PieSeries.DataMarker>
-                    </chart:PieSeries>
-                </chart:SfChart.Series>
-            </chart:SfChart>
-           <chart:SfChart x:Name="Chart4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <chart:SfChart.Series>
+                        <chart:PieSeries ItemsSource="{Binding Data2}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                            <chart:PieSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:PieSeries.DataMarker>
+                        </chart:PieSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+               <chart:SfChart x:Name="Chart3" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
 
-                <chart:SfChart.BindingContext>
-                    <carbonFootprint:ViewModel/>
-                </chart:SfChart.BindingContext>
+                    <chart:SfChart.BindingContext>
+                        <carbonFootprint:ViewModel/>
+                    </chart:SfChart.BindingContext>
 
-                <chart:SfChart.Legend>
-                    <chart:ChartLegend />
-                </chart:SfChart.Legend>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
 
-                <chart:SfChart.Title> 
-                    <chart:ChartTitle Text="Chart"/>
-                </chart:SfChart.Title>
+                    <chart:SfChart.Title> 
+                        <chart:ChartTitle Text="Month emission"/>
+                    </chart:SfChart.Title>
 
-                <chart:SfChart.PrimaryAxis>
-                    <chart:CategoryAxis>
-                        <chart:CategoryAxis.Title>
-                            <chart:ChartAxisTitle Text="Rating"/>
-                        </chart:CategoryAxis.Title>
-                    </chart:CategoryAxis>
-                </chart:SfChart.PrimaryAxis>
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Rating"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
 
-                <chart:SfChart.SecondaryAxis>
-                    <chart:NumericalAxis>
-                        <chart:NumericalAxis.Title>
-                            <chart:ChartAxisTitle Text="Amount of KW"/>
-                        </chart:NumericalAxis.Title>
-                    </chart:NumericalAxis>
-                </chart:SfChart.SecondaryAxis>
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Amount of KW"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
 
-                <chart:SfChart.Series>
-                    <chart:PieSeries ItemsSource="{Binding Data4}" Label="Heights" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
-                        <chart:PieSeries.DataMarker>
-                            <chart:ChartDataMarker/>
-                        </chart:PieSeries.DataMarker>
-                    </chart:PieSeries>
-                </chart:SfChart.Series>
-            </chart:SfChart>
-           <Button Text="Transport" x:Name="TransportButton" ClassId="Transport" Clicked="PageButtonClicked"/>
-           <Button Text="Food"  x:Name="FoodButton" ClassId="Food" Clicked="PageButtonClicked"/>
-           <Button Text="Products"  x:Name="ProductsButton" ClassId="Products" Clicked="PageButtonClicked"/>
-           <Button Text="Regulars"  x:Name="RegularsButton" ClassId="Regulars" Clicked="PageButtonClicked"/>
-           <Button Text="Settings"  x:Name="SettingsButton" ClassId="Settings" Clicked="PageButtonClicked"/>
-       </StackLayout>
+                    <chart:SfChart.Series>
+                        <chart:PieSeries ItemsSource="{Binding Data3}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                            <chart:PieSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:PieSeries.DataMarker>
+                        </chart:PieSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+               <chart:SfChart x:Name="Chart4" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+
+                    <chart:SfChart.BindingContext>
+                        <carbonFootprint:ViewModel/>
+                    </chart:SfChart.BindingContext>
+
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.Title> 
+                        <chart:ChartTitle Text="Year emission"/>
+                    </chart:SfChart.Title>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Rating"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Amount of KW"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:PieSeries ItemsSource="{Binding Data4}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                            <chart:PieSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:PieSeries.DataMarker>
+                        </chart:PieSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+               <Button Text="Transport" x:Name="TransportButton" ClassId="Transport" Clicked="PageButtonClicked"/>
+               <Button Text="Food"  x:Name="FoodButton" ClassId="Food" Clicked="PageButtonClicked"/>
+               <Button Text="Products"  x:Name="ProductsButton" ClassId="Products" Clicked="PageButtonClicked"/>
+               <Button Text="Regulars"  x:Name="RegularsButton" ClassId="Regulars" Clicked="PageButtonClicked"/>
+               <Button Text="Settings"  x:Name="SettingsButton" ClassId="Settings" Clicked="PageButtonClicked"/>
+           </StackLayout>
+       </ScrollView>
    </ContentPage.Content>
 </ContentPage>

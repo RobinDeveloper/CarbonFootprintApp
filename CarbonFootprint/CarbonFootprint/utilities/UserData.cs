@@ -25,10 +25,10 @@ namespace CarbonFootprint.utilities
         public PMNUScore PMNUWeekScore;
         public PMNUScore PMNUMonthScore;
         public PMNUScore PMNUYearScore;
-        public double ProdcutScore;
-        public double TransportScore;
-        public double EverydayScore;
-        public double FoodScore;
+        public PMNUScore ProdcutScore;
+        public PMNUScore TransportScore;
+        public PMNUScore EverydayScore;
+        public PMNUScore FoodScore;
         public Car Car;
         public House House;
     }
