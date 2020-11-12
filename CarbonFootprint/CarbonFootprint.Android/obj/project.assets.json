@@ -1933,20 +1933,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Robin\\.nuget\\packages\\": {}
+    "/Users/julienverheijen/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.Android\\CarbonFootprint.Android.csproj",
+      "projectUniqueName": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/CarbonFootprint.Android.csproj",
       "projectName": "CarbonFootprint.Android",
-      "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.Android\\CarbonFootprint.Android.csproj",
-      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-      "outputPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.Android\\obj\\",
+      "projectPath": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/CarbonFootprint.Android.csproj",
+      "packagesPath": "/Users/julienverheijen/.nuget/packages/",
+      "outputPath": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/julienverheijen/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
@@ -1957,8 +1957,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
-              "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj"
+            "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj": {
+              "projectPath": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj"
             }
           }
         }

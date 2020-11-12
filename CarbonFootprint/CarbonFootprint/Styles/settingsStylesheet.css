@@ -1,0 +1,48 @@
+^ContentPage {
+    background-image: background.png;
+    color: black;
+}
+
+label {
+    font-size: 20;
+    margin: 20 0 0 65;
+    color: black;
+}
+
+#Avatar {
+    margin: 20 0;
+    height: 100;
+    
+}
+#UserIcon {
+
+}
+stacklayout entry {
+    background-color: white;
+    border-radius: 30 40;
+    margin: 0 10;
+}
+
+stacklayout picker {
+    background-color: white;
+    border-radius: 30 40;
+    margin: 0 10;
+}
+
+#SubmitButton {
+    margin: 10 10 0 10;
+}
+#FeedbackButton {
+    margin: 0 10;
+}
+#LogoutButton {
+    margin: 0 10;
+    background-color: red;
+    color: white;
+}
+#DeleteButton {
+    margin: 0 10;
+    background-color: red;
+    color: white;
+    
+}

@@ -1,0 +1,36 @@
+@string/appbar_scrolling_view_behavior;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/rootlayout.xml
+alpha;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/enterfromleft.xml
+alpha;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/exittoleft.xml
+android.support.design.widget.AppBarLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/flyoutcontent.xml
+android.support.design.widget.AppBarLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/rootlayout.xml
+android.support.design.widget.AppBarLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/shellcontent.xml
+android.support.design.widget.BottomNavigationView;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/rootlayout.xml
+android.support.design.widget.CoordinatorLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/shellcontent.xml
+android.support.design.widget.TabLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/rootlayout.xml
+android.support.design.widget.TabLayout;obj/Debug/res/layout/tabbar.xml
+android.support.v7.widget.RecyclerView;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/flyoutcontent.xml
+android.support.v7.widget.Toolbar;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/rootlayout.xml
+android.support.v7.widget.Toolbar;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/shellcontent.xml
+android.support.v7.widget.Toolbar;obj/Debug/res/layout/toolbar.xml
+color;obj/Debug/res/values/colors.xml
+FrameLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/bottomtablayout.xml
+item;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/values/styles.xml
+item;obj/Debug/res/values/styles.xml
+LinearLayout;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/bottomtablayout.xml
+resources;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/values/styles.xml
+resources;obj/Debug/res/values/colors.xml
+resources;obj/Debug/res/values/styles.xml
+set;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/enterfromleft.xml
+set;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/enterfromright.xml
+set;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/exittoleft.xml
+set;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/exittoright.xml
+style;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/values/styles.xml
+style;obj/Debug/res/values/styles.xml
+translate;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/enterfromleft.xml
+translate;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/enterfromright.xml
+translate;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/exittoleft.xml
+translate;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/anim/exittoright.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint.Android/obj/Debug/lp/40/jl/res/layout/rootlayout.xml

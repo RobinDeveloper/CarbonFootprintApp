@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BFd6mAid47CC/AoRt+94uN4NMV/ePedWjMeHJTMBzPhyA6RO6RhtTG3pHsvWTUjtyGQg0FGn+giwUoloPSLh5g==",
+  "dgSpecHash": "yoqvIOBdoptH40t6YHbSYIRvsKGrAFn4UB348rU9Hj3R6JQ35AbpVZsTOJhz0iF67a6Lq3TzgNFOK+2hHUi0Ig==",
   "success": true,
-  "projectFilePath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj",
+  "projectFilePath": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Robin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Robin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Robin\\.nuget\\packages\\xamarin.forms\\4.4.0.991640\\xamarin.forms.4.4.0.991640.nupkg.sha512"
+    "/Users/julienverheijen/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/julienverheijen/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/julienverheijen/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/julienverheijen/.nuget/packages/xamarin.forms/4.4.0.991640/xamarin.forms.4.4.0.991640.nupkg.sha512"
   ],
   "logs": []
 }

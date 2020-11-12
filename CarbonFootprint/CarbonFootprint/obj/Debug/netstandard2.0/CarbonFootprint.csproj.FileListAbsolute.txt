@@ -1,14 +1,29 @@
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\bin\Debug\netstandard2.0\CarbonFootprint.deps.json
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\bin\Debug\netstandard2.0\CarbonFootprint.dll
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\bin\Debug\netstandard2.0\CarbonFootprint.pdb
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.csprojAssemblyReference.cache
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\App.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.AssemblyInfoInputs.cache
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.AssemblyInfo.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.csproj.CoreCompileInputs.cache
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\XamlC.stamp
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.dll
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.pdb
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\SettingScreen.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\DebugValues.xaml.g.cs
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/bin/Debug/netstandard2.0/CarbonFootprint.deps.json
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/bin/Debug/netstandard2.0/CarbonFootprint.dll
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/bin/Debug/netstandard2.0/CarbonFootprint.pdb
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.csprojAssemblyReference.cache
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/App.xaml.g.cs
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.AssemblyInfoInputs.cache
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.AssemblyInfo.cs
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.csproj.CoreCompileInputs.cache
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/XamlC.stamp
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.dll
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.pdb
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/SettingScreen.xaml.g.cs
+D:/Fontys/Prof/CarbonFootprint/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/DebugValues.xaml.g.cs
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/bin/Debug/netstandard2.0/CarbonFootprint.deps.json
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/bin/Debug/netstandard2.0/CarbonFootprint.dll
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/bin/Debug/netstandard2.0/CarbonFootprint.pdb
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.csprojAssemblyReference.cache
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/DebugValues.xaml.g.cs
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/SettingScreen.xaml.g.cs
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.AssemblyInfoInputs.cache
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.AssemblyInfo.cs
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.csproj.CoreCompileInputs.cache
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.dll
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/CarbonFootprint.pdb
+/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/Debug/netstandard2.0/Styles/settingsStylesheet.css.g.cs

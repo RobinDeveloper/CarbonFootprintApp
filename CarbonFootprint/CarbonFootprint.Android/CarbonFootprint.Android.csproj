@@ -65,6 +65,14 @@
         <None Include="Properties\AndroidManifest.xml" />
     </ItemGroup>
     <ItemGroup>
+        <AndroidResource Include="Resources\drawable\avatar1.png" />
+        <AndroidResource Include="Resources\drawable\avatar2.png" />
+        <AndroidResource Include="Resources\drawable\avatar3.png" />
+        <AndroidResource Include="Resources\drawable\background.png" />
+        <AndroidResource Include="Resources\drawable\carside.png" />
+        <AndroidResource Include="Resources\drawable\house.png" />
+        <AndroidResource Include="Resources\drawable\logosmall.png" />
+        <AndroidResource Include="Resources\drawable\user.png" />
         <AndroidResource Include="Resources\layout\Tabbar.axml" />
         <AndroidResource Include="Resources\layout\Toolbar.axml" />
         <AndroidResource Include="Resources\values\styles.xml" />

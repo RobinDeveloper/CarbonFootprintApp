@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {}
+    "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj": {}
   },
   "projects": {
-    "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
+    "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj",
+        "projectUniqueName": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj",
         "projectName": "CarbonFootprint",
-        "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\obj\\",
+        "projectPath": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/CarbonFootprint.csproj",
+        "packagesPath": "/Users/julienverheijen/.nuget/packages/",
+        "outputPath": "/Users/julienverheijen/Documents/School/Proftaak/Project map/CarbonFootprint/CarbonFootprint/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/julienverheijen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -61,7 +61,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Users\\Robin\\.dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
         }
       }
     }
