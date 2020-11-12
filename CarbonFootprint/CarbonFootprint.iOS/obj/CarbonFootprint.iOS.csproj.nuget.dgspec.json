@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj": {}
+  },
+  "projects": {
+    "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
+        "projectName": "CarbonFootprint.iOS",
+        "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\CarbonFootprint.iOS.csproj",
+        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+        "outputPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
+                "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[18.2.0.59, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991640, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj",
+        "projectName": "CarbonFootprint",
+        "projectPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint.csproj",
+        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+        "outputPath": "D:\\Fontys\\Prof\\CarbonFootprint\\CarbonFootprint\\CarbonFootprint\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[18.2.0.59, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.4.0.991640, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Users\\Robin\\.dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
