@@ -1,9 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarbonFootprint.TransportScreen">
+             x:Class="CarbonFootprint.TransportScreen"
+             BackgroundImage = "achtergrondnocopyright.png">
+
     <ContentPage.Content>
-        <StackLayout>
+        <RelativeLayout>
+            <BoxView Color="#99FFFFFF" CornerRadius="50"
+             RelativeLayout.XConstraint="-12"
+             RelativeLayout.YConstraint="101"
+             RelativeLayout.WidthConstraint= "410"
+             RelativeLayout.HeightConstraint="1090"/>
+            <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -14,11 +22,11 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="TransportName" Text="Transport" HorizontalTextAlignment ="Center" Grid.Row="0" Grid.Column="1"/>
-                <Button x:Name="ButtonHomeScreen" Text="&lt;" Clicked="GoToMainScreen" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="TransportName" Text="Transport" HorizontalTextAlignment ="Center" Grid.Row="1" Grid.Column="1" TextColor="Black" Font="Bold,25" />
+                <Button x:Name="ButtonHomeScreen" Clicked="GoToMainScreen" BackgroundColor="White" Opacity="0.8" BorderRadius="10" ImageSource="download1.png" WidthRequest="0"/>
             </Grid>
             <Label x:Name="SumCarbon" Text="" />
-            <Button x:Name="BicycleButton" Text="Bicycle" Clicked="AddBicycleDistance"/>
+            <Button x:Name="BicycleButton" Text="Bicycle" Clicked="AddBicycleDistance" BackgroundColor="White" Opacity="0.8" Font="Bold" BorderRadius="10"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -29,11 +37,11 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="BicycleName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
-                <Entry x:Name="BicycleDistance" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="BicycleName" Text="Distance:" Grid.Row="0" Grid.Column="0" TextColor="#092d07" Font="Bold,19"/>
+                    <Entry x:Name="BicycleDistance" Grid.Row="0" Grid.Column="1" BackgroundColor="#a5ed9a"/>
+                <Label Text="km" Grid.Row="0" Grid.Column="2" TextColor="#092d07" Font="Bold,15"/>
             </Grid>
-            <Button x:Name="TrainButton" Text="Train" Clicked="AddTrainDistance"/>
+            <Button x:Name="TrainButton" Text="Train" Clicked="AddTrainDistance" BackgroundColor="White" Opacity="0.8" Font="Bold" BorderRadius="10"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -44,11 +52,11 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="TrainName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
-                <Entry x:Name="TrainDistance" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="TrainName" Text="Distance:" Grid.Row="0" Grid.Column="0" TextColor="#092d07" Font="Bold,19" />
+                    <Entry x:Name="TrainDistance" Grid.Row="0" Grid.Column="1" BackgroundColor="#a5ed9a"/>
+                <Label Text="km" Grid.Row="0" Grid.Column="2" TextColor="#092d07" Font="Bold,15"/>
             </Grid>
-            <Button x:Name="BusButton" Text="Bus" Clicked="AddBusDistance"/>
+            <Button x:Name="BusButton" Text="Bus" Clicked="AddBusDistance" BackgroundColor="White" Opacity="0.8" Font="Bold" BorderRadius="10"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -59,11 +67,11 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="BusName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
-                <Entry x:Name="BusDistance" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="BusName" Text="Distance:" Grid.Row="0" Grid.Column="0" TextColor="#092d07" Font="Bold,19"/>
+                    <Entry x:Name="BusDistance" Grid.Row="0" Grid.Column="1" BackgroundColor="#a5ed9a"/>
+                <Label Text="km" Grid.Row="0" Grid.Column="2" TextColor="#092d07" Font="Bold,15"/>
             </Grid>
-            <Button x:Name="CarButton" Text="Car" Clicked="AddCarDistance"/>
+            <Button x:Name="CarButton" Text="Car" Clicked="AddCarDistance" BackgroundColor="White" Opacity="0.8" Font="Bold" BorderRadius="10"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -74,10 +82,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label x:Name="CarName" Text="Distance:" Grid.Row="0" Grid.Column="0"/>
-                <Entry x:Name="CarDistance" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Km" Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="CarName" Text="Distance:" Grid.Row="0" Grid.Column="0" TextColor="#092d07" Font="Bold,19"/>
+                    <Entry x:Name="CarDistance" Grid.Row="0" Grid.Column="1" BackgroundColor="#a5ed9a"/>
+                <Label Text="km" Grid.Row="0" Grid.Column="2" TextColor="#092d07" Font="Bold,15"/>
             </Grid>
+                <Button x:Name="SaveButton" Text="Save" Clicked="AddCarDistance" BackgroundColor="#355437" Opacity="0.8" Font="Bold" BorderRadius="10" TextColor="White"/>
         </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
