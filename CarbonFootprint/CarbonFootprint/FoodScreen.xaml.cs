@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using CarbonFootprint.DataCollection;
+using CarbonFootprint.utilities;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,10 +13,36 @@ namespace CarbonFootprint
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FoodScreen : ContentPage
     {
+        double m_TotalCarbonFood;
+        double m_CookingCarbon;
+        double m_MealCarbon;
+        double m_CookingMealCarbon;
+        double[] FoodArray = new double[6];
+        private GeneralAppliances m_GeneralAppliances;
+        private UserData m_UserData;
 
         public FoodScreen()
         {
             InitializeComponent();
+           
+
+            if (Jsonhandler.Instance.CheckIfFileExists("userdata.json"))
+            {
+                m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            }
+            else
+            {
+                DisplayAlert("No userdata data found ", "Fill in the setting screen", "Ok");
+            }
+
+            if (Jsonhandler.Instance.CheckIfFileExists("appliences.json"))
+            {
+                m_GeneralAppliances = Jsonhandler.Instance.RequestObject<GeneralAppliances>("appliences.json");
+            }
+            else
+            {
+                DisplayAlert("No appliance data found ","Fill in the regular expanses screen","Ok");
+            }
         }
 
         async void NewValue(object _sender, ValueChangedEventArgs _e)
@@ -25,27 +52,67 @@ namespace CarbonFootprint
             double oldValue = _e.OldValue;
             if (oldValue < newValue)
             {
-                var actionSheet = await DisplayActionSheet("How did you make it?", null, null, "Furnice", "Microwave/Oven", "Bought ready");
+                var actionSheet = await DisplayActionSheet("How did you make it?", null, null, "Furnice", "Microwave/Oven", "Bought ready", "Cold meal");
                 
+                switch (actionSheet)
+                {
+                    case "Furnice":
+                        m_CookingCarbon = m_GeneralAppliances.CookingValue;
+                        break;
+                    case "Microwave/Oven":
+                        m_CookingCarbon = 0.321;
+                        break;
+                    case "Bought ready":
+                        m_CookingCarbon = 0.543;
+                        break;
+                    case "Cold meal":
+                        m_CookingCarbon = 0;
+                        break;
+                }
+
                 switch (stepper.ClassId)
                 {
                     case "VeganStepper":
                         VeganAmount.Text = newValue.ToString();
+                        m_MealCarbon = 0.5;
+                        m_CookingMealCarbon = m_CookingCarbon + m_MealCarbon;
+                        FoodArray[0] = m_CookingMealCarbon;
+                        TotalSum(m_CookingMealCarbon);
                         break;
                     case "VegetarianStepper":
                         VegetarianAmount.Text = newValue.ToString();
+                        m_MealCarbon = 0.567;
+                        m_CookingMealCarbon = m_CookingCarbon + m_MealCarbon;
+                        FoodArray[1] = m_CookingMealCarbon;
+                        TotalSum(m_CookingMealCarbon);
                         break;
                     case "PescotarianStepper":
                         PescotarianAmount.Text = newValue.ToString();
+                        m_MealCarbon = 0.6;
+                        m_CookingMealCarbon = m_CookingCarbon + m_MealCarbon;
+                        FoodArray[2] = m_CookingMealCarbon;
+                        TotalSum(m_CookingMealCarbon);
                         break;
                     case "LowMeatStepper":
                         LowMeatAmount.Text = newValue.ToString();
+                        m_MealCarbon = 0.633;
+                        m_CookingMealCarbon = m_CookingCarbon + m_MealCarbon;
+                        FoodArray[3] = m_CookingMealCarbon;
+                        TotalSum(m_CookingMealCarbon);
                         break;
                     case "MediumMeatStepper":
                         MediumMeatAmount.Text = newValue.ToString();
+                        m_MealCarbon = 0.833;
+                        m_CookingMealCarbon = m_CookingCarbon + m_MealCarbon;
+                        FoodArray[4] = m_CookingMealCarbon;
+                        TotalSum(m_CookingMealCarbon);
                         break;
                     case "HighMeatStepper":
                         HighMeatAmount.Text = newValue.ToString();
+                        m_MealCarbon = 1.1;
+                        m_CookingMealCarbon = m_CookingCarbon + m_MealCarbon;
+                        FoodArray[5] = m_CookingMealCarbon;
+                        TotalSum(m_CookingMealCarbon);
                         break;
                 }                    
             }
@@ -57,24 +124,53 @@ namespace CarbonFootprint
                 {
                     case "VeganStepper":
                         VeganAmount.Text = newValue.ToString();
+                        m_CookingMealCarbon = FoodArray[0];
+                        MinusTotal(m_CookingMealCarbon);
                         break;
                     case "VegetarianStepper":
                         VegetarianAmount.Text = newValue.ToString();
+                        m_CookingMealCarbon = FoodArray[1];
+                        MinusTotal(m_CookingMealCarbon);
                         break;
                     case "PescotarianStepper":
                         PescotarianAmount.Text = newValue.ToString();
+                        m_CookingMealCarbon = FoodArray[2];
+                        MinusTotal(m_CookingMealCarbon);
                         break;
                     case "LowMeatStepper":
                         LowMeatAmount.Text = newValue.ToString();
+                        m_CookingMealCarbon = FoodArray[3];
+                        MinusTotal(m_CookingMealCarbon);
                         break;
                     case "MediumMeatStepper":
                         MediumMeatAmount.Text = newValue.ToString();
+                        m_CookingMealCarbon = FoodArray[4];
+                        MinusTotal(m_CookingMealCarbon);
                         break;
                     case "HighMeatStepper":
                         HighMeatAmount.Text = newValue.ToString();
+                        m_CookingMealCarbon = FoodArray[5];
+                        MinusTotal(m_CookingMealCarbon);
                         break;
                 }
             }
+        }
+
+        private void AddData()
+        {
+            m_UserData.FoodScore.Unkowm += (int)m_TotalCarbonFood;
+            Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
+        }
+
+        private void TotalSum(double plusValue)
+        {
+            m_TotalCarbonFood = m_TotalCarbonFood + plusValue;
+            AddData();
+        }
+        private void MinusTotal(double minusValue)
+        {
+            m_TotalCarbonFood = m_TotalCarbonFood - minusValue;
+            AddData();
         }
     }
 }
