@@ -14,4 +14,23 @@
         <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.59" />
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
     </ItemGroup>
+
+    <ItemGroup>
+      <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <BundleResource Include="Resources\achtergrondnocopyright.png" />
+      <BundleResource Include="Resources\avatar2.png" />
+      <BundleResource Include="Resources\background.png" />
+      <BundleResource Include="Resources\carside.png" />
+      <BundleResource Include="Resources\download1.png" />
+      <BundleResource Include="Resources\house.png" />
+      <BundleResource Include="Resources\ic_launcher.png" />
+      <BundleResource Include="Resources\logo.png" />
+      <BundleResource Include="Resources\logologin.png" />
+      <BundleResource Include="Resources\logosmall.png" />
+      <BundleResource Include="Resources\user.png" />
+      <BundleResource Include="Resources\white.png" />
+    </ItemGroup>
 </Project>

@@ -2,22 +2,62 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarbonFootprint.SettingScreen">
+             x:Class="CarbonFootprint.SettingScreen"
+             BackgroundImage = "background.png">
+             
+    <ContentPage.Resources>
+        <StyleSheet Source="styles/SettingStylesheet.css"/>
+    </ContentPage.Resources>
+
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="SettingScreenText" Text="Setting Screen" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Label x:Name="PersonalInfortmation" Text="Personal information" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="NameField" Placeholder="Input name" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Label x:Name="CarInformation" Text="Car information" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="CarName" Placeholder="Input car name" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="CarAge" Placeholder="Input car age" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="Carbuild" Placeholder="Input car build year" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="GasMilage" Placeholder="Input gas milage 1:" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Picker x:Name="TypePicker" Title="Pick car type" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-            <Label x:Name="HouseInformation" Text="House information" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="EnergyEfficiency" Placeholder="Energy efficiancy rating" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Entry x:Name="CubicVolume" Placeholder="Input cubic volume x:x:x" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-            <Button x:Name="SubmitButton" Text="Submit" Clicked="OnSubmit"/>
-        </StackLayout>
+        <ScrollView>
+        <RelativeLayout>
+            
+            <BoxView Color="#99FFFFFF" CornerRadius="50"
+                     RelativeLayout.XConstraint="0"
+                     RelativeLayout.YConstraint="80"
+                     RelativeLayout.WidthConstraint= "410"
+                     RelativeLayout.HeightConstraint="1090" />
+            
+            <Image x:Name="UserIcon" Source="user.png"
+                   RelativeLayout.XConstraint="25"
+                   RelativeLayout.YConstraint="215"/>
+            
+            <Image x:Name="CarIcon" Source="carside.png"
+                   RelativeLayout.XConstraint="20"
+                   RelativeLayout.YConstraint="320"/>
+            
+            <Image x:Name="HouseIcon" Source="house.png"
+                   RelativeLayout.XConstraint="20"
+                   RelativeLayout.YConstraint="620"/>
+            
+            <StackLayout>
+                <Image  x:Name="Avatar" Source="avatar2.png" Aspect="AspectFit"
+                        HeightRequest="150"
+                        WidthRequest="410"/>
+                <Label  x:Name="PersonalInfortmation" Text="Personal information" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="NameField" Placeholder="Name:"/>
+                <Label  x:Name="CarInformation" Text="Car information" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="CarName" Placeholder="Car Name:" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="CarAge" Placeholder="Car Age:" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="Carbuild" Placeholder="Build Year:" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="GasMilage" Placeholder="Gas Milage 1:" VerticalTextAlignment="Start"/>
+                <Picker x:Name="TypePicker" Title="Pick Car Type" VerticalOptions="CenterAndExpand"/>
+                <Label  x:Name="HouseInformation" Text="House information" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="EnergyEfficiency" Placeholder="Energy Efficiancy Rating:" VerticalTextAlignment="Start"/>
+                <Entry  x:Name="CubicVolume" Placeholder="Input Cubic Volume x:x:x" VerticalTextAlignment="Start"/>
+                <Button x:Name="SubmitButton" Text="Save Settings" Clicked="OnSubmit" CornerRadius="10"/>
+                <Button x:Name="FeedbackButton" Text="Send Feedback" Clicked="OnSubmit" CornerRadius="10"/>
+                <Button x:Name="LogoutButton" Text="Logout" Clicked="OnSubmit" CornerRadius="10"/>
+                <Button x:Name="DeleteButton" Text="Delete your account" Clicked="OnSubmit" CornerRadius="10"/>
+                <Image  x:Name="LogoSmall" Source="logosmall.png"/>
+            
+                </StackLayout>
+                
+        </RelativeLayout>  
+        </ScrollView>   
+
     </ContentPage.Content>
+      
 </ContentPage>
