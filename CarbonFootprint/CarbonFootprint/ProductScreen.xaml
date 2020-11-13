@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:carbonFootprint="clr-namespace:CarbonFootprint;assembly=CarbonFootprint"
+             x:Class="CarbonFootprint.ProductScreen">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.BindingContext>
+                    <carbonFootprint:ViewmodelProduct/>
+                </chart:SfChart.BindingContext>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title> 
+                    <chart:ChartTitle Text="Carbon footprint"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Rating"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Amount of emmision"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:PieSeries ItemsSource="{Binding Data}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                        <chart:PieSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:PieSeries.DataMarker>
+                    </chart:PieSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Clothing item"/>
+                <Picker Grid.Row="0" Grid.Column="0" x:Name="ClothingTypepicker" Title="Clothing type"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="SubmitClothingItem" Text="Submit" ClassId="ClothingButton" Clicked="SubmitButtonClicked"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Technology item"/>
+                <Picker Grid.Row="0" Grid.Column="0" x:Name="TechnologyTypepicker" Title="Technology type"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="SubmitTechnologyItem" Text="Submit" ClassId="TechnologyButton" Clicked="SubmitButtonClicked"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Furniture item"/>
+                <Picker Grid.Row="0" Grid.Column="0" x:Name="FurnitureTypepicker" Title="Furniture type"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="SubmitFurnitureItem" Text="Submit" ClassId="FurnitureButton" Clicked="SubmitButtonClicked"/>
+            </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
