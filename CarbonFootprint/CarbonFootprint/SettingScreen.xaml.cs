@@ -34,13 +34,17 @@ namespace CarbonFootprint
             InitializeComponent();
 
             m_FileExist = Jsonhandler.Instance.CheckIfFileExists("userdata.json");
-            
+
             if (m_FileExist)
+            {
                 m_PremadeUserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+                m_UserData = new UserData();
+            }
             else
             {
                 m_UserData = new UserData();
-                PopulateUserData();                
+                m_PremadeUserData = new UserData();
+                PopulateUserData();
             }
             
             
@@ -54,6 +58,8 @@ namespace CarbonFootprint
         {
             CreateUserData();
             Jsonhandler.Instance.UploadJson("userdata.json", _toSerialize: m_UserData);
+            SettingScreenText.Text = "Data has been uploaded";
+            App.Current.MainPage = new HomeScreen();
         }
 
         private void CreateUserData()
@@ -102,7 +108,8 @@ namespace CarbonFootprint
                     DisplayAlert("Invalid energy rating", "please insert character from a-f", "ok");
                 });
 
-            string premadeInput = $"{m_PremadeUserData.House.CubicMeters.Item1.ToString()}:{m_PremadeUserData.House.CubicMeters.Item2.ToString()}:{m_PremadeUserData.House.CubicMeters.Item3.ToString()}";
+            //string premadeInput = $"{m_PremadeUserData.House.CubicMeters.Item1.ToString()}:{m_PremadeUserData.House.CubicMeters.Item2.ToString()}:{m_PremadeUserData.House.CubicMeters.Item3.ToString()}";
+            string premadeInput = "11:11:11";
             m_HouseData.CubicMeters = GetCubicMeters(EmptyCheck(CubicVolume.Text, premadeInput, "cubic input can't be empty"));
 
             if (GetCubicMeters(EmptyCheck(CubicVolume.Text, premadeInput, "cubic input can't be empty")) != null)
