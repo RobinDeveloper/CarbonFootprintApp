@@ -58,7 +58,6 @@ namespace CarbonFootprint
         {
             CreateUserData();
             Jsonhandler.Instance.UploadJson("userdata.json", _toSerialize: m_UserData);
-            SettingScreenText.Text = "Data has been uploaded";
             App.Current.MainPage = new HomeScreen();
         }
 

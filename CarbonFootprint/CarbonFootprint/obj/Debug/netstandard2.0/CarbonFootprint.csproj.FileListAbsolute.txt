@@ -3,17 +3,19 @@ D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\bin\Debug\netstan
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\bin\Debug\netstandard2.0\CarbonFootprint.pdb
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.csprojAssemblyReference.cache
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\DebugValues.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\EveryDayScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\FoodScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\HomeScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\LoginScreen.xaml.g.cs
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\ProductScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\SettingScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\TransportScreen.xaml.g.cs
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\styles\SettingStylesheet.css.g.cs
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.AssemblyInfoInputs.cache
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.AssemblyInfo.cs
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.csproj.CoreCompileInputs.cache
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.pdb
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\SettingScreen.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\DebugValues.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\HomeScreen.xaml.g.cs
-<<<<<<< HEAD
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\TransportScreen.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\LoginScreen.xaml.g.cs
-D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\ProductScreen.xaml.g.cs
