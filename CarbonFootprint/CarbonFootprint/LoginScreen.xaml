@@ -7,7 +7,7 @@
         <StackLayout>
             <Label Text="Hello and welcome to carbon footprint"/>
             <Entry x:Name="Username" Placeholder="Enter username"/>
-            <Entry x:Name="Password" Placeholder="Enter password"/>
+            <Entry x:Name="Password" Placeholder="Enter password" IsPassword="True"/>
             <Button x:Name="Login" Text="Login" Clicked="LoginClicked"/>
         </StackLayout>
     </ContentPage.Content>
