@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarbonFootprint.FoodScreen"
+             BackgroundImage = "achtergrondnocopyright.png">
+    
+    <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView Color="#99FFFFFF" CornerRadius="50"
+             RelativeLayout.XConstraint="-12"
+             RelativeLayout.YConstraint="101"
+             RelativeLayout.WidthConstraint= "410"
+             RelativeLayout.HeightConstraint="1090"/>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="ButtonHomeScreen" 
+                        Clicked="GoToMainScreen" 
+                        BackgroundColor="White" 
+                        Opacity="0.8" 
+                        BorderRadius="10" 
+                        ImageSource="download1.png" 
+                        WidthRequest="0"/>
+                </Grid>
+                
+                <Label Text="Food" 
+                       HorizontalTextAlignment ="Center" 
+                       Grid.Row="1" 
+                       Grid.Column="1" 
+                       TextColor="Black" 
+                       Font="Bold,25" 
+                       HorizontalOptions="FillAndExpand"
+                       VerticalTextAlignment="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label x:Name="VeganLabel" Text="   Vegan meals" 
+                       Grid.Row="0" Grid.Column="0" 
+                       FontSize="20"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center"
+                       TextColor="#092d07"/>
+                
+                <Label x:Name="VeganAmount" Text="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       FontSize="40"
+                       TextColor="Black"/>
+                
+                <Stepper ClassId="VeganStepper" 
+                         HorizontalOptions="Start" 
+                         VerticalOptions="StartAndExpand"
+                         Grid.Column="2" 
+                         ValueChanged="NewValue"
+                         BackgroundColor="#13b51e"/>
+            </Grid>
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="VegetarianLabel" 
+                       Text="  Vegetarian meals" 
+                       Grid.Row="0" 
+                       Grid.Column="0"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       TextColor="#092d07"/>
+                
+                <Label x:Name="VegetarianAmount" Text="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       FontSize="40"
+                       TextColor="Black"/>
+                
+                <Stepper ClassId="VegetarianStepper" HorizontalOptions="Start" VerticalOptions="StartAndExpand"
+                         Grid.Column="2" ValueChanged="NewValue" BackgroundColor="#13b51e"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                    <Label x:Name="PescotarianLabel" 
+                           Text="  Pescotarian &#10;       meals" 
+                           Grid.Row="0" Grid.Column="0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           FontSize="20"
+                           TextColor="#092d07"/>
+                
+                <Label x:Name="PescotarianAmount" Text="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       FontSize="40"
+                       TextColor="Black"/>
+                
+                <Stepper ClassId="PescotarianStepper" HorizontalOptions="Start" VerticalOptions="StartAndExpand"
+                         Grid.Column="2" ValueChanged="NewValue" BackgroundColor="#13b51e"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="LowMeatLabel" 
+                       Text="  Low meat meals" 
+                       Grid.Row="0" 
+                       Grid.Column="0"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       TextColor="#092d07"/>
+                
+                <Label x:Name="LowMeatAmount" Text="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       FontSize="40"
+                       TextColor="Black"/>
+                
+                <Stepper ClassId="LowMeatStepper" HorizontalOptions="Start" VerticalOptions="StartAndExpand"
+                         Grid.Column="2" ValueChanged="NewValue" BackgroundColor="#13b51e"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="MediumMeatLabel" Text="  Medium meat &#10;  meals" 
+                       Grid.Row="0" 
+                       Grid.Column="0"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       TextColor="#092d07"/>
+                
+                <Label x:Name="MediumMeatAmount" 
+                       Text="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       FontSize="40"
+                       TextColor="Black"/>
+                
+                <Stepper ClassId="MediumMeatStepper" 
+                         HorizontalOptions="Start" VerticalOptions="StartAndExpand"
+                         Grid.Column="2" ValueChanged="NewValue" BackgroundColor="#13b51e"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="HighMeatLabel" 
+                       Text="  High meat meals" 
+                       Grid.Row="0" 
+                       Grid.Column="0"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center"
+                       FontSize="20"
+                       TextColor="#092d07"/>
+                
+                <Label x:Name="HighMeatAmount" Text="0"
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       FontSize="40"
+                       TextColor="Black"/>
+                
+                <Stepper ClassId="HighMeatStepper" HorizontalOptions="Start" VerticalOptions="StartAndExpand"
+                         Grid.Column="2" ValueChanged="NewValue" BackgroundColor="#13b51e"/>
+            </Grid>
+                <Button x:Name="SaveButton" 
+                        Text="Save" 
+                        Clicked="AddCarDistance" 
+                        BackgroundColor="#355437" 
+                        Opacity="0.8" 
+                        Font="Bold" 
+                        BorderRadius="7" 
+                        TextColor="White"/>
+        </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
