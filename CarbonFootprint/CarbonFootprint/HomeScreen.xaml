@@ -4,12 +4,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
              xmlns:carbonFootprint="clr-namespace:CarbonFootprint;assembly=CarbonFootprint"
-             x:Class="CarbonFootprint.HomeScreen">
-   <ContentPage.Content>
+             x:Class="CarbonFootprint.HomeScreen"
+             BackgroundImage = "background.png">
+   
+    <ContentPage.Resources>
+        <StyleSheet Source="styles/HomeStylesheet.css"/>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
        <ScrollView HeightRequest="3000">
-           <StackLayout>
-               <Label x:Name="NameLabel" Text="Hi Robin, Weclome to your carbon footprint homepae"/>
-               <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+           
+           <Grid>
+               <Grid.RowDefinitions>
+                   <RowDefinition Height="100" />
+                   <RowDefinition Height="250"/>
+                   <RowDefinition Height="250"/>
+                   <RowDefinition Height="50" />
+                   <RowDefinition Height="50" />
+                   <RowDefinition Height="50" />
+               </Grid.RowDefinitions>
+               <Grid.ColumnDefinitions>
+                   <ColumnDefinition />
+                   <ColumnDefinition />
+               </Grid.ColumnDefinitions>
+               
+               <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5, 5, 5, 0" Color="#99FFFFFF" CornerRadius="10" />
+               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 20, 5, 0" FontSize="Large" TextColor="Black" x:Name="NameLabel" Text="Hi Robin,"/>
+               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 50, 5, 0" TextColor="Black" x:Name="NameTextLabel" Text="Your footprint is lower than the average,"/>
+               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 70, 5, 0" TextColor="Black" x:Name="NameText2Label" Text="keep it up!"/>
+               
+               <Image Grid.Row="0" Grid.Column="1"  x:Name="Avatar" Source="avatar2.png" Aspect="AspectFit"
+                      HeightRequest="80"
+                      WidthRequest="80"
+                      Margin="90, 5, 0, 0"/>
+              
+               <chart:SfChart Grid.Row="1" Grid.Column="0" Margin="5, 0, 0, 0" BackgroundColor="#99FFFFFF" x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                 <chart:SfChart.BindingContext>
                     <carbonFootprint:ViewModel/>
@@ -47,7 +76,7 @@
                     </chart:PieSeries>
                 </chart:SfChart.Series>
             </chart:SfChart>
-               <chart:SfChart x:Name="Chart2" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+               <chart:SfChart Grid.Row="1" Grid.Column="1" Margin="0, 0, 5, 0" BackgroundColor="#99FFFFFF" x:Name="Chart2" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
 
                     <chart:SfChart.BindingContext>
                         <carbonFootprint:ViewModel/>
@@ -85,7 +114,7 @@
                         </chart:PieSeries>
                     </chart:SfChart.Series>
                 </chart:SfChart>
-               <chart:SfChart x:Name="Chart3" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+               <chart:SfChart Grid.Row="2" Grid.Column="0" Margin="5, 0, 0, 0" BackgroundColor="#99FFFFFF" x:Name="Chart3" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
 
                     <chart:SfChart.BindingContext>
                         <carbonFootprint:ViewModel/>
@@ -123,7 +152,7 @@
                         </chart:PieSeries>
                     </chart:SfChart.Series>
                 </chart:SfChart>
-               <chart:SfChart x:Name="Chart4" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
+               <chart:SfChart Grid.Row="2" Grid.Column="1" Margin="0, 0, 5, 0" BackgroundColor="#99FFFFFF" x:Name="Chart4" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand">
 
                     <chart:SfChart.BindingContext>
                         <carbonFootprint:ViewModel/>
@@ -161,12 +190,12 @@
                         </chart:PieSeries>
                     </chart:SfChart.Series>
                 </chart:SfChart>
-               <Button Text="Transport" x:Name="TransportButton" ClassId="Transport" Clicked="PageButtonClicked"/>
-               <Button Text="Food"  x:Name="FoodButton" ClassId="Food" Clicked="PageButtonClicked"/>
-               <Button Text="Products"  x:Name="ProductsButton" ClassId="Products" Clicked="PageButtonClicked"/>
-               <Button Text="Regulars"  x:Name="RegularsButton" ClassId="Regulars" Clicked="PageButtonClicked"/>
-               <Button Text="Settings"  x:Name="SettingsButton" ClassId="Settings" Clicked="PageButtonClicked"/>
-           </StackLayout>
+               <Button Grid.Row="3" Grid.Column="0" Margin="5, 0, 0, 0" Text="Transport" BackgroundColor="#99FFFFFF" x:Name="TransportButton" ClassId="Transport" Clicked="PageButtonClicked" CornerRadius="10"/>
+               <Button Grid.Row="3" Grid.Column="1" Margin="0, 0, 5, 0" Text="Food" BackgroundColor="#99FFFFFF" x:Name="FoodButton" ClassId="Food" Clicked="PageButtonClicked" CornerRadius="10"/>
+               <Button Grid.Row="4" Grid.Column="0" Margin="5, 0, 0, 0" Text="Products" BackgroundColor="#99FFFFFF" x:Name="ProductsButton" ClassId="Products" Clicked="PageButtonClicked" CornerRadius="10"/>
+               <Button Grid.Row="4" Grid.Column="1" Margin="0, 0, 5, 0" Text="Regulars" BackgroundColor="#99FFFFFF" x:Name="RegularsButton" ClassId="Regulars" Clicked="PageButtonClicked" CornerRadius="10"/>
+               <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="5, 0, 5, 5" Text="Settings" BackgroundColor="#99FFFFFF" x:Name="SettingsButton" ClassId="Settings" Clicked="PageButtonClicked" CornerRadius="10"/>
+           </Grid>
        </ScrollView>
    </ContentPage.Content>
 </ContentPage>
