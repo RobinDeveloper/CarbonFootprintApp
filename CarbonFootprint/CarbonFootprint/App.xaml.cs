@@ -15,7 +15,7 @@ namespace CarbonFootprint
         {
             Jsonhandler handlr = new Jsonhandler();
             InitializeComponent();
-            
+
             MainPage = new NavigationPage(new LoginScreen());
         }
 
