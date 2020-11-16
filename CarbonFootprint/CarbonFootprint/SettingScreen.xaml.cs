@@ -57,8 +57,23 @@ namespace CarbonFootprint
         private void OnSubmit(object _sender, EventArgs _e)
         {
             CreateUserData();
+            Values();
             Jsonhandler.Instance.UploadJson("userdata.json", _toSerialize: m_UserData);
             App.Current.MainPage = new HomeScreen();
+        }
+
+        private void Values()
+        {
+
+            m_UserData.PMNUDayScore = m_PremadeUserData.PMNUDayScore ?? new PMNUScore(1,1,1,1);
+            m_UserData.PMNUWeekScore = m_PremadeUserData.PMNUWeekScore ?? new PMNUScore(1,1,1,1);
+            m_UserData.PMNUMonthScore = m_PremadeUserData.PMNUMonthScore ?? new PMNUScore(1,1,1,1);
+            m_UserData.PMNUYearScore = m_PremadeUserData.PMNUYearScore ?? new PMNUScore(1,1,1,1);
+            
+            m_UserData.FoodScore = m_PremadeUserData.FoodScore ?? new PMNUScore(1,1,1,1);
+            m_UserData.EverydayScore =  m_PremadeUserData.EverydayScore ?? new PMNUScore(1,1,1,1);
+            m_UserData.TransportScore =  m_PremadeUserData.TransportScore ?? new PMNUScore(1,1,1,1);
+            m_UserData.ProdcutScore =  m_PremadeUserData.ProdcutScore ?? new PMNUScore(1,1,1,1);
         }
 
         private void CreateUserData()

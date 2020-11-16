@@ -19,3 +19,4 @@ D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstan
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.dll
 D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\CarbonFootprint.pdb
+D:\Fontys\Prof\CarbonFootprint\CarbonFootprint\CarbonFootprint\obj\Debug\netstandard2.0\styles\HomeStylesheet.css.g.cs

@@ -1,42 +1,126 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarbonFootprint.EveryDayScreen">
+             x:Class="CarbonFootprint.EveryDayScreen"
+             BackgroundImage = "achtergrondnocopyright.png">
+    
     <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView Color="#99FFFFFF" CornerRadius="50"
+             RelativeLayout.XConstraint="-12"
+             RelativeLayout.YConstraint="101"
+             RelativeLayout.WidthConstraint= "410"
+             RelativeLayout.HeightConstraint="1090"/> 
         <StackLayout>
-            <Label Text="Fixed Charges" HorizontalOptions="Center" />
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Button x:Name="CookingType" Text="Add" Grid.Column="1" Grid.Row="0" Clicked="AddCookingType"/>
-                <Picker x:Name="TypeOfGasCook" Title="Select a cooking style" Grid.Row="0" Grid.Column="0">
-                    <Picker.Items>
-                        <x:String>Gas</x:String>
-                        <x:String>Induction</x:String>
-                    </Picker.Items>
-                </Picker>
-                <Picker x:Name="TypeOfPet" Title="Select a pet" Grid.Row="1" Grid.Column="0">
-                    <Picker.Items>
-                        <x:String>Cat</x:String>
-                        <x:String>Dog</x:String>
-                        <x:String>Rabbit</x:String>
-                        <x:String>Fish</x:String>
-                        <x:String>Bird</x:String>
-                        <x:String>Horse</x:String>
-                        <x:String>Other</x:String>
-                    </Picker.Items>
-                </Picker>
-                <Button x:Name="PetType" Text="Add" Grid.Column="1" Grid.Row="1" Clicked="AddPetType"/>
-                <Button x:Name="RemovePet" Text="Remove" Grid.Row="1" Grid.Column="2" Clicked="RemovePetType"/>
-            </Grid>
-            <Label Text="Heating"/>
-            <Picker x:Name="HeatType" Title="Type of heating in your house">
+            
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            <Label x:Name="EverydayName" 
+                       Text="Fixed charges" 
+                       HorizontalTextAlignment ="Center" 
+                       Grid.Row="1" 
+                       Grid.Column="1" 
+                       TextColor="Black" 
+                       Font="Bold,25" 
+                       HorizontalOptions="FillAndExpand"
+                       VerticalTextAlignment="Center"/>
+                <Label x:Name="SelectCooking"
+                           Text="Select a cooking style"
+                           HorizontalTextAlignment="Center"
+                           Grid.Column="0"
+                           Font =" Bold, 20"
+                           TextColor="#092d07"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="CookingType" 
+                        Text="Add" 
+                        Grid.Column="2" 
+                        Grid.Row="1" 
+                        Clicked="AddCookingType"
+                        BackgroundColor="#13b51e"
+                        TextColor="White"
+                         BorderRadius="10">
+                    </Button>
+                    <Picker x:Name="TypeOfGasCook" 
+                        Title="Cooking style"
+                        FontSize = "18" 
+                        Grid.Row="1" 
+                        Grid.Column="0"
+                        BackgroundColor="#a5ed9a"
+                        TextColor="Black">
+                        <Picker.Items>
+                            <x:String>Gas</x:String>
+                            <x:String>Induction</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Picker x:Name="TypeOfPet" 
+                        Title="Pet" 
+                        Grid.Row="3" 
+                        Grid.Column="0"
+                        FontSize = "18"
+                        BackgroundColor="#a5ed9a"
+                        TextColor="Black">
+                        <Picker.Items>
+                            <x:String>Cat</x:String>
+                            <x:String>Dog</x:String>
+                            <x:String>Rabbit</x:String>
+                            <x:String>Fish</x:String>
+                            <x:String>Bird</x:String>
+                            <x:String>Horse</x:String>
+                            <x:String>Other</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Button x:Name="PetType" 
+                        Text="Add" 
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Clicked="AddPetType"
+                        BackgroundColor="#13b51e"
+                        TextColor="White"
+                        BorderRadius="10"/>
+                    <Button x:Name="RemovePet" 
+                        Text="Remove" 
+                        Grid.Row="3" 
+                        Grid.Column="2" 
+                        Clicked="RemovePetType"
+                        BackgroundColor="#d62717"
+                        TextColor="White"
+                        BorderRadius="10"/>
+                    <Label x:Name="SelectPet"
+                           Text="Select a pet" 
+                           Font =" Bold, 20"
+                           TextColor="#092d07"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+                </Grid>
+                <Label Text="Select type of heating"
+                   Font =" Bold, 20"
+                   TextColor="#092d07"
+                   HorizontalTextAlignment="Center"/>
+                <Picker x:Name="HeatType" 
+                    Title="Heating"
+                    BackgroundColor="#a5ed9a"
+                    TextColor="Black"
+                    FontSize = "18">
                 <Picker.Items>
                     <x:String>Wood</x:String>
                     <x:String>Electricity</x:String>
@@ -44,26 +128,67 @@
                     <x:String>Gas</x:String>
                 </Picker.Items>
             </Picker>
-            <Button x:Name="HeatingType" Text="Add" Clicked="AddHeatingType"/>
-            <Label Text="Electricity"/>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Stepper Maximum="100" Minimum="0" Increment="1" Value="1" ValueChanged="OnNewValue" Grid.Row="0" Grid.Column="2"/>
-                <Label x:Name="HousematesInput" Text="1" Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Number of housemates: " Grid.Row="0" Grid.Column="0"/>
-                <Entry x:Name="EverageDay" Grid.Row="1" Grid.Column="1"/>
-                <Label Text="Everage electricity &#10; usage per day: " Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start"/>
-                <Button x:Name="ElectricityUsage" Text="Add" Grid.Row="1" Grid.Column="2" Clicked="AddElectricityUse"/>
-            </Grid>
-            <Label x:Name="Test"/>
+            <Button x:Name="HeatingType" 
+                    Text="Add" 
+                    Clicked="AddHeatingType"
+                    BackgroundColor="#2cba36"
+                    TextColor="White"
+                    BorderRadius="10"/>
+            
+            <Label Text="Electricity"
+                   Font =" Bold, 20"
+                   TextColor="#092d07"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Stepper Maximum="100" 
+                         Minimum="0" 
+                         Increment="1" 
+                         Value="1" 
+                         ValueChanged="OnNewValue" 
+                         Grid.Row="0" 
+                         Grid.Column="2"
+                         BackgroundColor="#13b51e"/>
+                    <Label x:Name="HousematesInput" 
+                       Text="1" 
+                       Grid.Row="0" 
+                       Grid.Column="1"
+                       Font ="Bold, 22"
+                       TextColor="Black"/>
+                    <Label Text="  Number of &#10; housemates:" 
+                       Grid.Row="0" 
+                       Grid.Column="0"
+                       Font ="18"
+                       TextColor="#092d07"/>
+                    <Entry x:Name="EverageDay" 
+                       Grid.Row="1" 
+                       Grid.Column="1"
+                       BackgroundColor="#a5ed9a"
+                       TextColor="Black"
+                       FontSize = "18"/>
+                    <Label Text="Average electricity &#10; usage per day: " 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       HorizontalTextAlignment="Start"
+                       Font ="17"
+                       TextColor="#092d07"/>
+                    <Button x:Name="ElectricityUsage" 
+                        Text="Add" 
+                        Grid.Row="1" 
+                        Grid.Column="2" 
+                        Clicked="AddElectricityUse"
+                        BackgroundColor="#13b51e"
+                        TextColor="White"
+                        BorderRadius="10"/>
+                </Grid>
         </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

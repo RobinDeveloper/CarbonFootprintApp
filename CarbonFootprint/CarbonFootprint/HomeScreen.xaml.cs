@@ -30,12 +30,26 @@ namespace CarbonFootprint
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            
             m_UserData = Jsonhandler.Instance.CheckIfFileExists("userdata.json") ? Jsonhandler.Instance.RequestObject<UserData>("userdata.json") : new UserData();
-            
+
             HandleChartsBinding();
             HandleDate();
         }
+        private void HardReset()
+        {
+            UserData userData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            userData.PMNUDayScore = new PMNUScore(1,1,1,1);
+            userData.PMNUWeekScore = new PMNUScore(1,1,1,1);
+            userData.PMNUMonthScore =new PMNUScore(1,1,1,1);
+            userData.PMNUYearScore = new PMNUScore(1,1,1,1);
+            
+            userData.FoodScore = new PMNUScore(1,1,1,1);
+            userData.EverydayScore = new PMNUScore(1,1,1,1);
+            userData.TransportScore = new PMNUScore(1,1,1,1);
+            userData.ProdcutScore = new PMNUScore(1,1,1,1);
+            Jsonhandler.Instance.UploadJson("userdata.json", userData);
+        }
+        
 
         private void HandleDate()
         {
@@ -108,7 +122,7 @@ namespace CarbonFootprint
         private void LabelField()
         {
             m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
-            string nameFieldText = $"Hi Robin, \n Weclome to your carbon footprint homepage";
+            string nameFieldText = $"Hi {m_UserData.Name},";
             NameLabel.Text = nameFieldText;
         }
 

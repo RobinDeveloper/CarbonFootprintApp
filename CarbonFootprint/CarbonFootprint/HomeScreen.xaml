@@ -30,8 +30,8 @@
                
                <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="5, 5, 5, 0" Color="#99FFFFFF" CornerRadius="10" />
                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 20, 5, 0" FontSize="Large" TextColor="Black" x:Name="NameLabel" Text="Hi Robin,"/>
-               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 50, 5, 0" TextColor="Black" x:Name="NameTextLabel" Text="Your footprint is lower than the average,"/>
-               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 70, 5, 0" TextColor="Black" x:Name="NameText2Label" Text="keep it up!"/>
+               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 50, 5, 0" TextColor="Black" x:Name="NameTextLabel" Text="welcome to the carbon footprint homescreen"/>
+               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="15, 70, 5, 0" TextColor="Black" x:Name="NameText2Label" Text="from here you can see your emission"/>
                
                <Image Grid.Row="0" Grid.Column="1"  x:Name="Avatar" Source="avatar2.png" Aspect="AspectFit"
                       HeightRequest="80"
