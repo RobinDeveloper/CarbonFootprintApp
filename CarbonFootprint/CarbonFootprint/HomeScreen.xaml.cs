@@ -18,27 +18,93 @@ namespace CarbonFootprint
     public partial class HomeScreen : ContentPage
     {
         private UserData m_UserData;
-        
+        private DateCollected m_DateTime;
+
         public HomeScreen()
         {
             InitializeComponent();
 
             LabelField();
-            CheckIfFocussed();
-            LabelField();
         }
 
-        private void CheckIfFocussed()
+        protected override void OnAppearing()
         {
-            if (IsFocused)
-            {
-                Chart.BindingContext = new ViewModel();
-                Chart2.BindingContext = new ViewModel();
-                Chart3.BindingContext = new ViewModel();
-                Chart4.BindingContext = new ViewModel();
-            }
+            base.OnAppearing();
+            
+            m_UserData = Jsonhandler.Instance.CheckIfFileExists("userdata.json") ? Jsonhandler.Instance.RequestObject<UserData>("userdata.json") : new UserData();
+            
+            HandleChartsBinding();
+            HandleDate();
         }
 
+        private void HandleDate()
+        {
+            m_DateTime = Jsonhandler.Instance.CheckIfFileExists("date.json") ? Jsonhandler.Instance.RequestObject<DateCollected>("date.json") : new DateCollected();
+
+            if (m_DateTime.LastCheckedDay != DateTime.Today)
+            {
+                m_UserData.PMNUDayScore = new PMNUScore();
+                m_DateTime.LastCheckedDay = DateTime.Today;
+            }
+
+            if (!DatesAreInTheSameWeek(m_DateTime.LastCheckedWeek, DateTime.Today))
+            {
+                m_UserData.PMNUWeekScore = new PMNUScore();
+                m_DateTime.LastCheckedWeek = DateTime.Today;
+            }
+
+            if (!DatesAreInTheSameMonth(m_DateTime.LastCheckedMonth, DateTime.Today))
+            {
+                m_UserData.PMNUMonthScore = new PMNUScore();
+                m_DateTime.LastCheckedMonth = DateTime.Today;
+            }
+
+            if (!DatesAreInTheSameYear(m_DateTime.LastCheckedYear, DateTime.Today))
+            {
+                m_UserData.PMNUYearScore = new PMNUScore();
+                m_DateTime.LastCheckedYear = DateTime.Today;
+            }
+            
+            Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
+            Jsonhandler.Instance.UploadJson("data.json", m_DateTime);
+        }
+        
+        //https://stackoverflow.com/questions/25795254/check-if-a-datetime-is-in-same-week-as-other-datetime/38792243
+        private bool DatesAreInTheSameWeek(DateTime _date1, DateTime _date2)
+        {
+            var cal = System.Globalization.DateTimeFormatInfo.CurrentInfo.Calendar;
+            var d1 = _date1.Date.AddDays(-1 * (int)cal.GetDayOfWeek(_date1));
+            var d2 = _date2.Date.AddDays(-1 * (int)cal.GetDayOfWeek(_date2));
+
+            return d1 == d2;
+        }
+        
+        private bool DatesAreInTheSameMonth(DateTime _date1, DateTime _date2)
+        {
+            var cal = System.Globalization.DateTimeFormatInfo.CurrentInfo.Calendar;
+            var d1 = _date1.Date.AddDays(-1 * (int)cal.GetDayOfMonth(_date1));
+            var d2 = _date2.Date.AddDays(-1 * (int)cal.GetDayOfMonth(_date2));
+
+            return d1 == d2;
+        }
+        
+        private bool DatesAreInTheSameYear(DateTime _date1, DateTime _date2)
+        {
+            var cal = System.Globalization.DateTimeFormatInfo.CurrentInfo.Calendar;
+            var d1 = _date1.Date.AddDays(-1 * (int)cal.GetDayOfYear(_date1));
+            var d2 = _date2.Date.AddDays(-1 * (int)cal.GetDayOfYear(_date2));
+
+            return d1 == d2;
+        }
+        
+        private void HandleChartsBinding()
+        {
+            Chart.BindingContext = new ViewModel();
+            Chart2.BindingContext = new ViewModel();
+            Chart3.BindingContext = new ViewModel();
+            Chart4.BindingContext = new ViewModel();
+        }
+        
         private void LabelField()
         {
             m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
@@ -84,6 +150,7 @@ namespace CarbonFootprint
         private UserData m_UserData;
         public ViewModel()
         {
+            //HardReset();
             if (!Jsonhandler.Instance.CheckIfFileExists("userdata.json")) return;
             m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
 
@@ -118,6 +185,21 @@ namespace CarbonFootprint
                 new PieData(m_UserData.PMNUYearScore.Negative, "Negative", Color.Red),
                 new PieData(m_UserData.PMNUYearScore.Unkowm, "Unkown", Color.Gray)
             };
+        }
+        
+        private void HardReset()
+        {
+            UserData userData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            userData.PMNUDayScore = new PMNUScore(1,1,1,1);
+            userData.PMNUWeekScore = new PMNUScore(1,1,1,1);
+            userData.PMNUMonthScore =new PMNUScore(1,1,1,1);
+            userData.PMNUYearScore = new PMNUScore(1,1,1,1);
+            
+            userData.FoodScore = new PMNUScore(1,1,1,1);
+            userData.EverydayScore = new PMNUScore(1,1,1,1);
+            userData.TransportScore = new PMNUScore(1,1,1,1);
+            userData.ProdcutScore = new PMNUScore(1,1,1,1);
+            Jsonhandler.Instance.UploadJson("userdata.json", userData);
         }
     }
 

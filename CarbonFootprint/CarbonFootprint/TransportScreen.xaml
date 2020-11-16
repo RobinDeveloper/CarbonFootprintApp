@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:carbonFootprint="clr-namespace:CarbonFootprint;assembly=CarbonFootprint"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
              x:Class="CarbonFootprint.TransportScreen"
              BackgroundImage = "achtergrondnocopyright.png">
 
@@ -23,7 +25,6 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Label x:Name="TransportName" Text="Transport" HorizontalTextAlignment ="Center" Grid.Row="1" Grid.Column="1" TextColor="Black" Font="Bold,25" />
-                <Button x:Name="ButtonHomeScreen" Clicked="GoToMainScreen" BackgroundColor="White" Opacity="0.8" BorderRadius="10" ImageSource="download1.png" WidthRequest="0"/>
             </Grid>
             <Label x:Name="SumCarbon" Text="" />
             <Button x:Name="BicycleButton" Text="Bicycle" Clicked="AddBicycleDistance" BackgroundColor="White" Opacity="0.8" Font="Bold" BorderRadius="10"/>
@@ -86,8 +87,45 @@
                     <Entry x:Name="CarDistance" Grid.Row="0" Grid.Column="1" BackgroundColor="#a5ed9a"/>
                 <Label Text="km" Grid.Row="0" Grid.Column="2" TextColor="#092d07" Font="Bold,15"/>
             </Grid>
-                <Button x:Name="SaveButton" Text="Save" Clicked="AddCarDistance" BackgroundColor="#355437" Opacity="0.8" Font="Bold" BorderRadius="10" TextColor="White"/>
-        </StackLayout>
+                <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                    <chart:SfChart.BindingContext>
+                        <carbonFootprint:ViewmodelTransport/>
+                    </chart:SfChart.BindingContext>
+
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.Title> 
+                        <chart:ChartTitle Text="Carbon footprint"/>
+                    </chart:SfChart.Title>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Rating"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Amount of emmision"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:PieSeries ItemsSource="{Binding Data}" Label="Carbon emission" XBindingPath="Rating" YBindingPath="Value" EnableTooltip="True">
+                            <chart:PieSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:PieSeries.DataMarker>
+                        </chart:PieSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+            </StackLayout>
         </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

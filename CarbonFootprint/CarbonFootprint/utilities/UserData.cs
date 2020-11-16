@@ -16,6 +16,18 @@ namespace CarbonFootprint.utilities
         public int Medium;
         public int Negative;
         public int Unkowm;
+
+        public PMNUScore()
+        {
+        }
+        
+        public PMNUScore(int _positive, int _medium, int _negative, int _unkowm)
+        {
+            Positive = _positive;
+            Medium = _medium;
+            Negative = _negative;
+            Unkowm = _unkowm;
+        }
     }
     
     public class UserData

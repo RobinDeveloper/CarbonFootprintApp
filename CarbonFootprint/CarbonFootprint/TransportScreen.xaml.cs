@@ -2,6 +2,7 @@
 using CarbonFootprint.utilities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Net.Http;
@@ -103,15 +104,31 @@ namespace CarbonFootprint
             {
                 case PositivityRating.Positive:
                     m_UserData.PMNUDayScore.Positive += (int)_carbon;
+                    m_UserData.PMNUWeekScore.Positive += (int)_carbon;
+                    m_UserData.PMNUMonthScore.Positive += (int)_carbon;
+                    m_UserData.PMNUYearScore.Positive += (int)_carbon;
+                    m_UserData.TransportScore.Positive += (int)_carbon;
                     break;
                 case PositivityRating.Medium:
                     m_UserData.PMNUDayScore.Medium += (int)_carbon;
+                    m_UserData.PMNUWeekScore.Medium += (int)_carbon;
+                    m_UserData.PMNUMonthScore.Medium += (int)_carbon;
+                    m_UserData.PMNUYearScore.Medium += (int)_carbon;
+                    m_UserData.TransportScore.Medium += (int)_carbon;    
                     break;
                 case PositivityRating.Negative:
                     m_UserData.PMNUDayScore.Negative += (int)_carbon;
+                    m_UserData.PMNUWeekScore.Negative += (int)_carbon;
+                    m_UserData.PMNUMonthScore.Negative += (int)_carbon;
+                    m_UserData.PMNUYearScore.Negative += (int)_carbon;
+                    m_UserData.TransportScore.Negative += (int)_carbon;    
                     break;
                 case PositivityRating.Unkown:
                     m_UserData.PMNUDayScore.Unkowm += (int)_carbon;
+                    m_UserData.PMNUWeekScore.Unkowm += (int)_carbon;
+                    m_UserData.PMNUMonthScore.Unkowm += (int)_carbon;
+                    m_UserData.PMNUYearScore.Unkowm += (int)_carbon;
+                    m_UserData.TransportScore.Unkowm += (int)_carbon;  
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(_rating), _rating, null);
@@ -125,11 +142,32 @@ namespace CarbonFootprint
         private void UploadData()
         {
             Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
+            Chart.BindingContext = new ViewmodelTransport();
         }
 
         private async void GoToMainScreen(object _sender, EventArgs _e)
         {
             await Navigation.PushAsync(new HomeScreen());
+        }
+    }
+    
+    public class ViewmodelTransport
+    {
+        public ObservableCollection<PieDataProduct> Data { get; set; }
+        
+        private UserData m_UserData;
+
+        public ViewmodelTransport()
+        {
+            m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            
+            Data = new ObservableCollection<PieDataProduct>()
+            {
+                new PieDataProduct(m_UserData.TransportScore.Positive, "Positive", Color.Green),
+                new PieDataProduct(m_UserData.TransportScore.Medium, "Medium", Color.Yellow),
+                new PieDataProduct(m_UserData.TransportScore.Negative, "Negative", Color.Red),
+                new PieDataProduct(m_UserData.TransportScore.Unkowm, "Unkown", Color.Gray)
+            };
         }
     }
 }

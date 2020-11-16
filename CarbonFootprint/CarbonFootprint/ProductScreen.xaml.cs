@@ -28,12 +28,6 @@ namespace CarbonFootprint
             InitializeDictionaries();
         }
 
-        private void ResetData()
-        {
-            m_UserData.ProdcutScore = new PMNUScore();
-            m_UserData.PMNUDayScore = new PMNUScore();
-        }
-
         private void InitializeDictionaries()
         {
             m_TechnologyItems = new Dictionary<string, float>
@@ -184,18 +178,30 @@ namespace CarbonFootprint
             {
                 case PositivityRating.Positive:
                     m_UserData.PMNUDayScore.Positive += (int)_score;
+                    m_UserData.PMNUWeekScore.Positive += (int) _score;
+                    m_UserData.PMNUMonthScore.Positive += (int) _score;
+                    m_UserData.PMNUYearScore.Positive += (int) _score;
                     m_UserData.ProdcutScore.Positive += (int)_score;
                     break;
                 case PositivityRating.Medium:
                     m_UserData.PMNUDayScore.Medium += (int)_score;
+                    m_UserData.PMNUWeekScore.Medium += (int) _score;
+                    m_UserData.PMNUMonthScore.Medium += (int) _score;
+                    m_UserData.PMNUYearScore.Medium += (int) _score;
                     m_UserData.ProdcutScore.Medium += (int)_score;
                     break;
                 case PositivityRating.Negative:
                     m_UserData.PMNUDayScore.Negative += (int)_score;
+                    m_UserData.PMNUWeekScore.Negative += (int) _score;
+                    m_UserData.PMNUMonthScore.Negative += (int) _score;
+                    m_UserData.PMNUYearScore.Negative += (int) _score;
                     m_UserData.ProdcutScore.Negative += (int)_score;
                     break;
                 case PositivityRating.Unkown:
                     m_UserData.PMNUDayScore.Unkowm += (int)_score;
+                    m_UserData.PMNUWeekScore.Unkowm += (int) _score;
+                    m_UserData.PMNUMonthScore.Unkowm += (int) _score;
+                    m_UserData.PMNUYearScore.Unkowm += (int) _score;
                     m_UserData.ProdcutScore.Unkowm += (int)_score;
                     break;
                 default:

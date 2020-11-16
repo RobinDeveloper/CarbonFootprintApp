@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -160,6 +161,7 @@ namespace CarbonFootprint
         {
             m_UserData.FoodScore.Unkowm += (int)m_TotalCarbonFood;
             Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
+            Chart.BindingContext = new ViewmodelFood();
         }
 
         private void TotalSum(double plusValue)
@@ -171,6 +173,26 @@ namespace CarbonFootprint
         {
             m_TotalCarbonFood = m_TotalCarbonFood - minusValue;
             AddData();
+        }
+    }
+    
+    public class ViewmodelFood
+    {
+        public ObservableCollection<PieDataProduct> Data { get; set; }
+        
+        private UserData m_UserData;
+
+        public ViewmodelFood()
+        {
+            m_UserData = Jsonhandler.Instance.RequestObject<UserData>("userdata.json");
+            
+            Data = new ObservableCollection<PieDataProduct>()
+            {
+                new PieDataProduct(m_UserData.FoodScore.Positive, "Positive", Color.Green),
+                new PieDataProduct(m_UserData.FoodScore.Medium, "Medium", Color.Yellow),
+                new PieDataProduct(m_UserData.FoodScore.Negative, "Negative", Color.Red),
+                new PieDataProduct(m_UserData.FoodScore.Unkowm, "Unkown", Color.Gray)
+            };
         }
     }
 }
