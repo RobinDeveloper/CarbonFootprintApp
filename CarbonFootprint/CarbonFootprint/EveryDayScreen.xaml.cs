@@ -183,15 +183,15 @@ namespace CarbonFootprint
         private void AddElectricityUse(object _sender, EventArgs _e)
         {
             string _text = EverageDay.Text;
-           if(!double.TryParse(_text, out double ElectricityUsage))
+           if(!double.TryParse(_text, out double _electricityUsage))
             {
                 DisplayAlert("Warning", "Put a valid number", "OK");
             }
            else
             {
-                ElectricityUsage = Convert.ToDouble(EverageDay.Text);
+                _electricityUsage = Convert.ToDouble(EverageDay.Text);
                 double CarbonElectric = 5.178;
-                m_CarbonElectricity = ElectricityUsage / m_StepperValue * CarbonElectric;
+                m_CarbonElectricity = _electricityUsage / m_StepperValue * CarbonElectric;
                 AddData();
             }
         }

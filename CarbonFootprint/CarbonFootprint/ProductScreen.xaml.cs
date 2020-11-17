@@ -125,7 +125,7 @@ namespace CarbonFootprint
                     AddScoreToUserData(GetValue("Phone", m_TechnologyItems), PositivityRating.Negative);
                     break;
                 case "Laptop":
-                    AddScoreToUserData(GetValue("laptop", m_TechnologyItems), PositivityRating.Negative);
+                    AddScoreToUserData(GetValue("Laptop", m_TechnologyItems), PositivityRating.Negative);
                     break;
                 case "Airpods":
                     AddScoreToUserData(GetValue("Airpods", m_TechnologyItems), PositivityRating.Negative);
@@ -177,32 +177,32 @@ namespace CarbonFootprint
             switch (_rating)
             {
                 case PositivityRating.Positive:
-                    m_UserData.PMNUDayScore.Positive += (int)_score;
-                    m_UserData.PMNUWeekScore.Positive += (int) _score;
-                    m_UserData.PMNUMonthScore.Positive += (int) _score;
-                    m_UserData.PMNUYearScore.Positive += (int) _score;
-                    m_UserData.ProdcutScore.Positive += (int)_score;
+                    m_UserData.PMNUDayScore.Positive += _score;
+                    m_UserData.PMNUWeekScore.Positive +=  _score;
+                    m_UserData.PMNUMonthScore.Positive += _score;
+                    m_UserData.PMNUYearScore.Positive +=  _score;
+                    m_UserData.ProdcutScore.Positive += _score;
                     break;
                 case PositivityRating.Medium:
-                    m_UserData.PMNUDayScore.Medium += (int)_score;
-                    m_UserData.PMNUWeekScore.Medium += (int) _score;
-                    m_UserData.PMNUMonthScore.Medium += (int) _score;
-                    m_UserData.PMNUYearScore.Medium += (int) _score;
-                    m_UserData.ProdcutScore.Medium += (int)_score;
+                    m_UserData.PMNUDayScore.Medium += _score;
+                    m_UserData.PMNUWeekScore.Medium +=  _score;
+                    m_UserData.PMNUMonthScore.Medium +=  _score;
+                    m_UserData.PMNUYearScore.Medium +=  _score;
+                    m_UserData.ProdcutScore.Medium += _score;
                     break;
                 case PositivityRating.Negative:
-                    m_UserData.PMNUDayScore.Negative += (int)_score;
-                    m_UserData.PMNUWeekScore.Negative += (int) _score;
-                    m_UserData.PMNUMonthScore.Negative += (int) _score;
-                    m_UserData.PMNUYearScore.Negative += (int) _score;
-                    m_UserData.ProdcutScore.Negative += (int)_score;
+                    m_UserData.PMNUDayScore.Negative += _score;
+                    m_UserData.PMNUWeekScore.Negative +=  _score;
+                    m_UserData.PMNUMonthScore.Negative +=  _score;
+                    m_UserData.PMNUYearScore.Negative +=  _score;
+                    m_UserData.ProdcutScore.Negative += _score;
                     break;
                 case PositivityRating.Unkown:
-                    m_UserData.PMNUDayScore.Unkowm += (int)_score;
-                    m_UserData.PMNUWeekScore.Unkowm += (int) _score;
-                    m_UserData.PMNUMonthScore.Unkowm += (int) _score;
-                    m_UserData.PMNUYearScore.Unkowm += (int) _score;
-                    m_UserData.ProdcutScore.Unkowm += (int)_score;
+                    m_UserData.PMNUDayScore.Unkowm += _score;
+                    m_UserData.PMNUWeekScore.Unkowm +=  _score;
+                    m_UserData.PMNUMonthScore.Unkowm +=  _score;
+                    m_UserData.PMNUYearScore.Unkowm += _score;
+                    m_UserData.ProdcutScore.Unkowm += _score;
                     break;
                 default:
                     break;
@@ -240,11 +240,11 @@ namespace CarbonFootprint
 
     public class PieDataProduct
     {
-        public int Value { get; set; }
+        public double Value { get; set; }
         public string Rating { get; set; }
         public Color Color { get; set; }
 
-        public PieDataProduct(int _value, string _rating, Color _color)
+        public PieDataProduct(double _value, string _rating, Color _color)
         {
             Value = _value;
             Rating = _rating;

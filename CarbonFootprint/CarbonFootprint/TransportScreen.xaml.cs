@@ -103,32 +103,32 @@ namespace CarbonFootprint
             switch(_rating)
             {
                 case PositivityRating.Positive:
-                    m_UserData.PMNUDayScore.Positive += (int)_carbon;
-                    m_UserData.PMNUWeekScore.Positive += (int)_carbon;
-                    m_UserData.PMNUMonthScore.Positive += (int)_carbon;
-                    m_UserData.PMNUYearScore.Positive += (int)_carbon;
-                    m_UserData.TransportScore.Positive += (int)_carbon;
+                    m_UserData.PMNUDayScore.Positive += _carbon;
+                    m_UserData.PMNUWeekScore.Positive += _carbon;
+                    m_UserData.PMNUMonthScore.Positive += _carbon;
+                    m_UserData.PMNUYearScore.Positive += _carbon;
+                    m_UserData.TransportScore.Positive += _carbon;
                     break;
                 case PositivityRating.Medium:
-                    m_UserData.PMNUDayScore.Medium += (int)_carbon;
-                    m_UserData.PMNUWeekScore.Medium += (int)_carbon;
-                    m_UserData.PMNUMonthScore.Medium += (int)_carbon;
-                    m_UserData.PMNUYearScore.Medium += (int)_carbon;
-                    m_UserData.TransportScore.Medium += (int)_carbon;    
+                    m_UserData.PMNUDayScore.Medium += _carbon;
+                    m_UserData.PMNUWeekScore.Medium += _carbon;
+                    m_UserData.PMNUMonthScore.Medium += _carbon;
+                    m_UserData.PMNUYearScore.Medium += _carbon;
+                    m_UserData.TransportScore.Medium += _carbon;    
                     break;
                 case PositivityRating.Negative:
-                    m_UserData.PMNUDayScore.Negative += (int)_carbon;
-                    m_UserData.PMNUWeekScore.Negative += (int)_carbon;
-                    m_UserData.PMNUMonthScore.Negative += (int)_carbon;
-                    m_UserData.PMNUYearScore.Negative += (int)_carbon;
-                    m_UserData.TransportScore.Negative += (int)_carbon;    
+                    m_UserData.PMNUDayScore.Negative += _carbon;
+                    m_UserData.PMNUWeekScore.Negative += _carbon;
+                    m_UserData.PMNUMonthScore.Negative += _carbon;
+                    m_UserData.PMNUYearScore.Negative += _carbon;
+                    m_UserData.TransportScore.Negative += _carbon;    
                     break;
                 case PositivityRating.Unkown:
-                    m_UserData.PMNUDayScore.Unkowm += (int)_carbon;
-                    m_UserData.PMNUWeekScore.Unkowm += (int)_carbon;
-                    m_UserData.PMNUMonthScore.Unkowm += (int)_carbon;
-                    m_UserData.PMNUYearScore.Unkowm += (int)_carbon;
-                    m_UserData.TransportScore.Unkowm += (int)_carbon;  
+                    m_UserData.PMNUDayScore.Unkowm += _carbon;
+                    m_UserData.PMNUWeekScore.Unkowm += _carbon;
+                    m_UserData.PMNUMonthScore.Unkowm += _carbon;
+                    m_UserData.PMNUYearScore.Unkowm += _carbon;
+                    m_UserData.TransportScore.Unkowm += _carbon;  
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(_rating), _rating, null);

@@ -50,14 +50,17 @@ namespace CarbonFootprint
             Jsonhandler.Instance.UploadJson("userdata.json", userData);
         }
         
-
         private void HandleDate()
         {
             m_DateTime = Jsonhandler.Instance.CheckIfFileExists("date.json") ? Jsonhandler.Instance.RequestObject<DateCollected>("date.json") : new DateCollected();
-
+            GeneralAppliances appliances = Jsonhandler.Instance.CheckIfFileExists("appliences.json")
+                ? Jsonhandler.Instance.RequestObject<GeneralAppliances>("appliences.json")
+                : null;
             if (m_DateTime.LastCheckedDay != DateTime.Today)
             {
                 m_UserData.PMNUDayScore = new PMNUScore();
+                if (appliances != null)
+                    m_UserData.PMNUDayScore.Unkowm += appliances.PetValue;
                 m_DateTime.LastCheckedDay = DateTime.Today;
             }
 
@@ -219,11 +222,11 @@ namespace CarbonFootprint
 
     public class PieData
     {
-        public int Value { get; set; }
+        public double Value { get; set; }
         public string Rating { get; set; }
         public Color Color { get; set; }
 
-        public PieData(int _value, string _rating, Color _color)
+        public PieData(double _value, string _rating, Color _color)
         {
             Value = _value;
             Rating = _rating;

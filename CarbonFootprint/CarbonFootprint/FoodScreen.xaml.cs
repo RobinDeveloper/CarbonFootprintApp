@@ -159,7 +159,7 @@ namespace CarbonFootprint
 
         private void AddData()
         {
-            m_UserData.FoodScore.Unkowm += (int)m_TotalCarbonFood;
+            m_UserData.FoodScore.Unkowm += m_TotalCarbonFood;
             Jsonhandler.Instance.UploadJson("userdata.json", m_UserData);
             Chart.BindingContext = new ViewmodelFood();
         }

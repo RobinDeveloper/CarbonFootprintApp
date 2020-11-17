@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarbonFootprint.utilities
 {
-    public struct GeneralAppliances
+    public class GeneralAppliances
     {
         public double CookingValue;
         public double PetValue;

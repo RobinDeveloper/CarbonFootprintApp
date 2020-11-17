@@ -25,7 +25,7 @@ namespace CarbonFootprint
                     MoveToNewPage();
                     break;
                 case "admin":
-                    DisplayAlert("Invalid", "username or password is invalid", "Ok");
+                    DisplayAlert("InIn hvalid", "username or password is invalid", "Ok");
                     break;
                 default:
                     DisplayAlert("Invalid", "username or password is invalid", "Ok");
